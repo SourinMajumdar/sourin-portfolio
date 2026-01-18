@@ -1,0 +1,52 @@
+.footer {
+  background: linear-gradient(135deg, rgba(59, 131, 246, 0.137), rgba(6, 181, 212, 0.137));
+  border-top: 1px solid rgba(59, 130, 246, 0.15);
+  padding: 40px 0;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.footer-content {
+  text-align: center;
+}
+
+.footer-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 1rem;
+  color: #475569;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.heart-icon {
+  color: #ef4444;
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  25% { transform: scale(1.2); }
+  50% { transform: scale(1); }
+}
+
+.footer-copyright {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    padding: 0 20px;
+  }
+
+  .footer-text {
+    font-size: 0.9rem;
+  }
+}
