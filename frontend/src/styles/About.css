@@ -15,7 +15,7 @@
 }
 
 .about-intro {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   text-align: justify;
   line-height: 1.8;
   color: #475569;
@@ -53,7 +53,7 @@
 }
 
 .highlight-content h3 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 600;
   color: #1e293b;
   margin-bottom: 8px;
@@ -61,7 +61,7 @@
 
 .highlight-content p {
   color: #64748b;
-  font-size: 1.3rem;
+  font-size: 1.15rem;
   line-height: 1.6;
 }
 
