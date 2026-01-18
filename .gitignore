@@ -32,3 +32,6 @@ build
 *.sw?frontend/node_modules/.cache/default-development/11.pack
 frontend/node_modules/.cache/default-development/14.pack
 frontend/node_modules/.cache/default-development/66.pack
+
+/backend/frontend/node_modules/.cache/default-development/11.pack
+frontend/node_modules/.cache/default-development/22.pack
