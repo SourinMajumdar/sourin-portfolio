@@ -41,6 +41,7 @@ body {
 .intro.exit {
   opacity: 0;
   transform: translateY(-50px);
+  pointer-events: none;
 }
 
 /* BIG, THICK circle loader */
