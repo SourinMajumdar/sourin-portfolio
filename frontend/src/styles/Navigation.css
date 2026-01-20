@@ -16,6 +16,17 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
+/* Dark mode styles */
+.dark .navigation {
+  background-color: rgba(15, 23, 42, 0.7);
+  border-bottom: 1px solid rgba(96, 165, 250, 0.2);
+}
+
+.dark .navigation.scrolled {
+  background-color: rgba(15, 23, 42, 0.9);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -33,10 +44,16 @@
 }
 
 .nav-signature {
-  height: 32px;
-  width: auto;
-  cursor: pointer;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  font-family: "Bonheur Royale", cursive;
+  font-weight: 400;
+  font-style: normal;
+
+  font-size: 2rem;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+
+  color: hsl(var(--foreground));
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .nav-signature:hover {
@@ -73,6 +90,18 @@
   color: #3b82f6;
 }
 
+.dark .nav-link {
+  color: #cbd5e1;
+}
+
+.dark .nav-link:hover {
+  color: #60a5fa;
+}
+
+.dark .nav-link.active {
+  color: #60a5fa;
+}
+
 .nav-link.active::after {
   content: '';
   position: absolute;
@@ -85,6 +114,12 @@
   border-radius: 2px;
 }
 
+.mobile-nav-actions {
+  display: none;
+  align-items: center;
+  gap: 8px;
+}
+
 .mobile-menu-toggle {
   display: none;
   background: none;
@@ -93,6 +128,10 @@
   cursor: pointer;
   padding: 8px;
   transition: color 0.3s ease;
+}
+
+.dark .mobile-menu-toggle {
+  color: #60a5fa;
 }
 
 .mobile-menu {
@@ -109,6 +148,10 @@
     display: none;
   }
 
+  .mobile-nav-actions {
+    display: flex;
+  }
+
   .mobile-menu-toggle {
     display: block;
   }
@@ -120,6 +163,10 @@
     backdrop-filter: blur(10px);
     padding: 20px;
     gap: 4px;
+  }
+
+  .dark .mobile-menu {
+    background-color: rgba(15, 23, 42, 0.98);
   }
 
   .mobile-nav-link {
@@ -139,5 +186,15 @@
   .mobile-nav-link.active {
     color: #3b82f6;
     background-color: rgba(59, 130, 246, 0.1);
+  }
+
+  .dark .mobile-nav-link {
+    color: #cbd5e1;
+  }
+
+  .dark .mobile-nav-link:hover,
+  .dark .mobile-nav-link.active {
+    color: #60a5fa;
+    background-color: rgba(96, 165, 250, 0.15);
   }
 }

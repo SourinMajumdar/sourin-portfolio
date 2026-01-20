@@ -8,6 +8,11 @@
   background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
   position: relative;
   overflow: hidden;
+  transition: background 0.6s ease;
+}
+
+.dark .hero-section {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
 }
 
 .hero-section::before {
@@ -45,13 +50,17 @@
   pointer-events: none;
 }
 
+.dark .hero-section::after {
+  display: none;
+}
+
 
 @media (max-width: 768px) {
   .hero-section::after {
     opacity: 0.2;
   }
   .hero-content {
-    left:-100;
+    left: 0;
   }
 }
 
@@ -79,6 +88,10 @@
   gap: 8px;
 }
 
+.dark .hero-greeting {
+  color: #94a3b8;
+}
+
 .hero-name {
   font-size: 3.5rem;
   font-weight: 800;
@@ -88,6 +101,15 @@
   background-clip: text;
   margin-bottom: 16px;
   line-height: 1.2;
+  transition: filter 0.6s ease;
+}
+
+.dark .hero-name {
+  background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 30px rgba(96, 165, 250, 0.4));
 }
 
 .hero-title {
@@ -101,12 +123,20 @@
   white-space: nowrap;
 }
 
+.dark .typed-text {
+  color: #60a5fa;
+}
+
 .hero-description {
   font-size: 1.5rem;
   line-height: 1.7;
   color: #64748b;
   margin-bottom: 40px;
   max-width: 500px;
+}
+
+.dark .hero-description {
+  color: #94a3b8;
 }
 
 .hero-cta {
@@ -160,10 +190,18 @@
   transition: all 0.3s ease;
 }
 
+.dark .btn-secondary {
+  color: #60a5fa;
+  border-color: rgba(96, 165, 250, 0.5);
+}
 
 .btn-secondary:hover {
   background: rgba(59, 130, 246, 0.1);
   transform: translateY(-2px);
+}
+
+.dark .btn-secondary:hover {
+  background: rgba(96, 165, 250, 0.15);
 }
 
 .hero-social {
@@ -184,10 +222,89 @@
   transition: all 0.3s ease;
 }
 
+.dark .social-link {
+  background: rgba(96, 165, 250, 0.1);
+  border-color: rgba(96, 165, 250, 0.3);
+  color: #60a5fa;
+}
+
 .social-link:hover {
   background: rgba(59, 130, 246, 0.2);
   transform: translateY(-4px);
   box-shadow: 0 8px 16px rgba(59, 130, 246, 0.3);
+}
+
+.dark .social-link:hover {
+  background: rgba(96, 165, 250, 0.2);
+  box-shadow: 0 8px 16px rgba(96, 165, 250, 0.3);
+}
+
+/* Social icon colors - default in light mode */
+.icon-github {
+  color: #3b82f6;
+  transition: color 0.6s ease;
+}
+
+.icon-linkedin {
+  color: #3b82f6;
+  transition: color 0.6s ease;
+}
+
+.icon-instagram {
+  color: #3b82f6;
+  transition: color 0.6s ease;
+}
+
+/* Social icon colors in dark mode */
+.dark .icon-github {
+  color: #ffffff !important;
+}
+
+.dark .icon-linkedin {
+  color: #0A66C2 !important;
+}
+
+.dark .icon-instagram {
+  color: #E4405F !important;
+}
+
+/* Hero visual card icons - default color in light mode */
+.card-icon-svg {
+  color: #3b82f6;
+  transition: color 0.6s ease;
+}
+
+/* Hero visual card icons - colorful only in dark mode */
+.dark .card-icon-svg.card-icon-camera {
+  color: #3b82f6 !important;
+}
+
+.dark .card-icon-svg.card-icon-bike {
+  color: #a855f7 !important;
+}
+
+.dark .card-icon-svg.card-icon-game {
+  color: #ec4899 !important;
+}
+
+.dark .card-icon-svg.card-icon-code {
+  color: #22d3ee !important;
+}
+
+.dark .card-icon-svg.card-icon-bed {
+  color: #fb923c !important;
+}
+
+.dark .card-icon-svg.card-icon-ham {
+  color: #34d399 !important;
+}
+
+.dark .card-icon-svg.card-icon-music {
+  color: #f59e0b !important;
+}
+
+.dark .card-icon-svg.card-icon-love {
+  color: #ef4444 !important;
 }
 
 .hero-visual {
@@ -215,8 +332,18 @@
   transition: transform 0.3s ease;
 }
 
+.dark .floating-card {
+  background: rgba(30, 41, 59, 0.8);
+  border-color: rgba(96, 165, 250, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 20px rgba(96, 165, 250, 0.15);
+}
+
 .floating-card:hover {
   transform: translateY(-8px) scale(1.05);
+}
+
+.dark .floating-card:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(96, 165, 250, 0.3);
 }
 
 .camera {
@@ -280,6 +407,10 @@
   color: #3b82f6;
 }
 
+.dark .card-icon-svg {
+  color: #60a5fa;
+}
+
 .card-text {
   font-weight: 600;
   color: #1e293b;
@@ -287,11 +418,21 @@
   text-align: center;
 }
 
+.dark .card-text {
+  color: #e2e8f0;
+}
+
 .scroll-indicator {
   position: absolute;
   bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-indicator:hover {
+  opacity: 1;
 }
 
 .scroll-line {
@@ -299,6 +440,11 @@
   height: 60px;
   background: linear-gradient(180deg, #3b82f6, transparent);
   animation: scrollAnimation 2s ease-in-out infinite;
+}
+
+.dark .scroll-line {
+  background: linear-gradient(180deg, #60a5fa, #a78bfa, transparent);
+  box-shadow: 0 0 10px rgba(96, 165, 250, 0.5);
 }
 
 @keyframes scrollAnimation {

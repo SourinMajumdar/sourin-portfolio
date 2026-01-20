@@ -11,7 +11,7 @@ import Footer from '../components/Footer';
 import AnimatedSection from '../components/AnimatedSection';
 import '../styles/Portfolio.css';
 
-const Portfolio = () => {
+const Portfolio = ({ isDarkMode, toggleDarkMode }) => {
   const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
@@ -39,8 +39,12 @@ const Portfolio = () => {
 
   return (
     <div className="portfolio">
-      <Navigation activeSection={activeSection} />
-      <Hero />
+      <Navigation 
+        activeSection={activeSection} 
+        isDarkMode={isDarkMode} 
+        toggleDarkMode={toggleDarkMode} 
+      />
+      <Hero isDarkMode={isDarkMode} />
       <AnimatedSection>
         <About />
       </AnimatedSection>

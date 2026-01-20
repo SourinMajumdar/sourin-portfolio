@@ -9,8 +9,9 @@ import {
 import { Typewriter } from "react-simple-typewriter";
 // import { Button } from './ui/button';
 import '../styles/Hero.css';
+import ParticleNetwork from './ParticleNetwork';
 
-const Hero = () => {
+const Hero = ({ isDarkMode }) => {
   const scrollToContact = () => {
     const element = document.getElementById('contact');
     if (element) {
@@ -20,6 +21,7 @@ const Hero = () => {
 
   return (
     <section id="home" className="hero-section">
+      {isDarkMode && <ParticleNetwork />}
       <div className="hero-container">
         <div className="hero-content">
           <div className="hero-greeting">
@@ -58,27 +60,27 @@ const Hero = () => {
               href="https://github.com/SourinMajumdar" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="social-link"
+              className="social-link social-link-github"
               aria-label="GitHub"
             >
-              <Github size={24} />
+              <Github size={24} className="icon-github" />
             </a>
             <a 
               href="https://linkedin.com/in/sourinmajumdar" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="social-link"
+              className="social-link social-link-linkedin"
               aria-label="LinkedIn"
             >
-              <Linkedin size={24} />
+              <Linkedin size={24} className="icon-linkedin" />
             </a>
             <a 
               href="https://www.instagram.com/sourinsig/"
               target='_blank'
-              className="social-link"
+              className="social-link social-link-instagram"
               aria-label="Instagram"
             >
-              <Instagram size={24} />
+              <Instagram size={24} className="icon-instagram" />
             </a>
 
             <a href="/Sourin_Majumdar_Resume.pdf"
@@ -95,36 +97,28 @@ const Hero = () => {
 
         <div className="hero-visual">
           <div className="floating-card camera">
-            <Camera size={40} className="card-icon-svg" />
-            {/* <div className="card-text">React.js</div> */}
+            <Camera size={40} className="card-icon-svg card-icon-camera" />
           </div>
           <div className="floating-card bike">
-            <Bike size={40} className="card-icon-svg" />
-            {/* <div className="card-text">React.js</div> */}
+            <Bike size={40} className="card-icon-svg card-icon-bike" />
           </div>
           <div className="floating-card game">
-            <Gamepad2 size={40} className="card-icon-svg" />
-            {/* <div className="card-text">React.js</div> */}
+            <Gamepad2 size={40} className="card-icon-svg card-icon-game" />
           </div>
           <div className="floating-card code">
-            <Code2 size={40} className="card-icon-svg" />
-            {/* <div className="card-text">React.js</div> */}
+            <Code2 size={40} className="card-icon-svg card-icon-code" />
           </div>
           <div className="floating-card bed">
-            <Bed size={40} className="card-icon-svg" />
-            {/* <div className="card-text">React.js</div> */}
+            <Bed size={40} className="card-icon-svg card-icon-bed" />
           </div>
           <div className="floating-card ham">
-            <Hamburger size={40} className="card-icon-svg" />
-            {/* <div className="card-text">900+ Problems</div> */}
+            <Hamburger size={40} className="card-icon-svg card-icon-ham" />
           </div>
           <div className="floating-card music">
-            <Music2Icon size={40} className="card-icon-svg" />
-            {/* <div className="card-text">Open Source</div> */}
+            <Music2Icon size={40} className="card-icon-svg card-icon-music" />
           </div>
           <div className="floating-card love">
-            <Heart size={40} className="card-icon-svg" />
-            {/* <div className="card-text">Open Source</div> */}
+            <Heart size={40} className="card-icon-svg card-icon-love" />
           </div>
         </div>
       </div>

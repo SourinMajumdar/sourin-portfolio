@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import '../styles/Navigation.css';
-import signature from "../assets/sign.png"
+import DarkModeToggle from './DarkModeToggle';
 
-const Navigation = ({ activeSection }) => {
+const Navigation = ({ activeSection, isDarkMode, toggleDarkMode }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -78,11 +78,7 @@ const Navigation = ({ activeSection }) => {
     <nav className={`navigation ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
         <div className="nav-logo" onClick={() => scrollToSection('home')}>
-          <img
-            src={signature}
-            alt="Sourin Majumdar signature"
-            className="nav-signature"
-          />
+          <span className="nav-signature">Sourin Majumdar</span>
         </div>
 
         <div className="nav-links desktop-nav">
@@ -95,15 +91,19 @@ const Navigation = ({ activeSection }) => {
               {item.label}
             </button>
           ))}
+          <DarkModeToggle isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
         </div>
 
-        <button
-          className="mobile-menu-toggle"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label="Toggle menu"
-        >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="mobile-nav-actions">
+          <DarkModeToggle isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} isMobile={true} />
+          <button
+            className="mobile-menu-toggle"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       <AnimatePresence>

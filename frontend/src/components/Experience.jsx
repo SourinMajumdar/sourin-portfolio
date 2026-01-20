@@ -48,12 +48,13 @@ const Experience = () => {
                 <div className="experience-date">Jan 2026 - Present</div>
               </div>
 
-              {/* <div className="experience-description">
+              <div className="experience-description">
                 <p>
-                  Contributed to open-source projects focusing on Documentation and Data Structures 
-                  and Algorithms (DSA), helping improve learning resources for beginners.
+                  Building non-generic, real-world MVPs using Kombai’s AI-powered
+                  frontend tool and sharing demos and technical breakdowns on Reddit 
+                  to engage the developer community.
                 </p>
-              </div> */}
+              </div>
 
               {/* <div className="experience-highlights">
                 <div className="highlight-chip">
@@ -120,6 +121,9 @@ const Experience = () => {
                   Working on structured AI data annotation and evaluation tasks,
                   following detailed guidelines to review, validate, and improve model outputs
                   with a focus on accuracy and consistency.
+                  <br />
+                  Task involves working on different platforms like Zendesk, Jira, Ramp, Salesforce,
+                  Gmail, MS Teams, MS Word, Intercom, etc.
                 </p>
               </div>
 
@@ -197,7 +201,7 @@ const Experience = () => {
                   <span>Documentation</span>
                 </div>
                 <div className="highlight-chip">
-                  <Github size={16} />
+                  <Github size={16} className="icon-github" color="#181717" />
                   <span>Version Control (Git)</span>
                 </div>
                 <div className="highlight-chip">

@@ -60,25 +60,25 @@ const Contact = () => {
 
   const contactInfo = [
     {
-      icon: <Instagram size={24} color="#E4405F" />,
+      icon: <Instagram size={24} className="icon-instagram" />,
       label: "Instagram",
       value: "sourinsig",
       link: "https://www.instagram.com/sourinsig/",
     },
     {
-      icon: <Linkedin size={24} color="#0A66C2" />,
+      icon: <Linkedin size={24} className="icon-linkedin" />,
       label: "LinkedIn",
       value: "sourinmajumdar",
       link: "https://linkedin.com/in/sourinmajumdar",
     },
     {
-      icon: <Github size={24} color="#181717" />,
+      icon: <Github size={24} className="icon-github" />,
       label: "GitHub",
       value: "SourinMajumdar",
       link: "https://github.com/SourinMajumdar",
     },
     {
-      icon: <FaXTwitter size={24} color="#181717" />,
+      icon: <FaXTwitter size={24} className="icon-twitter" />,
       label: "X (Twitter)",
       value: "sourinstwt",
       link: "https://x.com/sourinstwt",
@@ -175,7 +175,7 @@ const Contact = () => {
 
               <Button
                 type="submit"
-                className="submit-btn"
+                className={`submit-btn ${isSubmitted ? 'submit-btn-success' : ''}`}
                 disabled={isSending || isSubmitted}
               >
                 {isSending ? (

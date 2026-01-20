@@ -1,6 +1,11 @@
 .about-section {
   padding: 100px 0;
   background-color: #ffffff;
+  transition: background-color 0.6s ease;
+}
+
+.dark .about-section {
+  background-color: #0f172a;
 }
 
 .about-content {
@@ -22,6 +27,10 @@
   margin-bottom: 40px;
 }
 
+.dark .about-intro {
+  color: #94a3b8;
+}
+
 .about-highlights {
   display: flex;
   flex-direction: column;
@@ -36,7 +45,12 @@
   background: rgba(59, 130, 246, 0.05);
   border-left: 3px solid #3b82f6;
   border-radius: 8px;
-  transition: all 0.3s ease;
+  transition: all 0.6s ease;
+}
+
+.dark .highlight-item {
+  background: rgba(96, 165, 250, 0.08);
+  border-left-color: #60a5fa;
 }
 @media (min-width: 769px) {
   .highlight-item { align-items: center;}
@@ -47,9 +61,74 @@
   transform: translateX(8px);
 }
 
+.dark .highlight-item:hover {
+  background: rgba(96, 165, 250, 0.12);
+  box-shadow: 0 4px 20px rgba(96, 165, 250, 0.2);
+}
+
 .highlight-icon {
   color: #3b82f6;
   flex-shrink: 0;
+  transition: color 0.6s ease;
+}
+
+.dark .highlight-icon {
+  color: #60a5fa;
+}
+
+/* About highlight icons - colorful only in dark mode */
+.dark .highlight-icon-lightbulb {
+  color: #f59e0b;
+}
+
+.dark .highlight-icon-target {
+  color: #ef4444;
+}
+
+.dark .highlight-icon-compass {
+  color: #3b82f6;
+}
+
+/* Hobby icons - default color in light mode */
+.hobby-icon {
+  color: #3b82f6;
+  transition: color 0.6s ease;
+}
+.hobby-icon2 {
+  color: #06b6d4;
+}
+
+/* Hobby icons - colorful only in dark mode */
+.dark .hobby-icon-camera {
+  color: #3b82f6;
+}
+
+.dark .hobby-icon-sprout {
+  color: #34d399;
+}
+
+.dark .hobby-icon-bike {
+  color: #a855f7;
+}
+
+.dark .hobby-icon-luggage {
+  color: #f59e0b;
+}
+
+.dark .hobby-icon-brush {
+  color: #ec4899;
+}
+
+.dark .hobby-icon-music {
+  color: #22d3ee;
+}
+
+.dark .hobby-icon-movie {
+  color: #ef4444;
+}
+
+.dark .hobby-icon-gamepad {
+  color: #fb923c;
 }
 
 .highlight-content h3 {
@@ -59,10 +138,18 @@
   margin-bottom: 8px;
 }
 
+.dark .highlight-content h3 {
+  color: #e2e8f0;
+}
+
 .highlight-content p {
   color: #64748b;
   font-size: 1.15rem;
   line-height: 1.6;
+}
+
+.dark .highlight-content p {
+  color: #94a3b8;
 }
 
 .about-education-wrapper {
@@ -76,6 +163,10 @@
   padding: 32px;
 }
 
+.dark .about-education {
+  background: #1e293b;
+}
+
 .education-title {
   font-size: 2rem;
   font-weight: 600;
@@ -83,11 +174,25 @@
   margin-bottom: 28px;
 }
 
+.dark .education-title {
+  background: linear-gradient(135deg, #60a5fa, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .hobbies-title {
   font-size: 2rem;
   font-weight: 600;
   color: #1e293b;
   margin-bottom: 24px;
+}
+
+.dark .hobbies-title {
+  background: linear-gradient(135deg, #ec4899, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .education-item {
@@ -98,6 +203,10 @@
   transition:
     border-color 0.3s ease,
     transform 0.3s ease;
+}
+
+.dark .education-item {
+  border-left-color: rgba(96, 165, 250, 0.3);
 }
 
 .education-item:last-child {
@@ -118,14 +227,26 @@
     background-color 0.3s ease;
 }
 
+.dark .education-item::before {
+  background: #60a5fa;
+}
+
 .education-item:hover::before {
   transform: scale(1.3);
   background-color: #2563eb;
 }
 
+.dark .education-item:hover::before {
+  background-color: #3b82f6;
+}
+
 .education-item:hover {
   border-left-color: #3b82f6;
   transform: translateX(8px);
+}
+
+.dark .education-item:hover {
+  border-left-color: #60a5fa;
 }
 
 .education-header {
@@ -146,6 +267,10 @@
   margin-bottom: 8px;
 }
 
+.dark .education-degree {
+  color: #e2e8f0;
+}
+
 .education-school {
   font-size: 1.3rem;
   font-style: oblique;
@@ -153,10 +278,18 @@
   margin-bottom: 8px;
 }
 
-.cbse {
+.dark .education-school {
+  color: #60a5fa;
+}
+
+.edu-details {
   font-size: 1rem;
   color: #475569;
   margin-bottom: 6px;
+}
+
+.dark .edu-details {
+  color: #94a3b8;
 }
 
 .education-date-pill {
@@ -170,6 +303,12 @@
   color: #3b82f6;
   white-space: nowrap;
   align-self: flex-start;
+}
+
+.dark .education-date-pill {
+  background: linear-gradient(135deg, rgba(96, 165, 250, 0.2), rgba(6, 182, 212, 0.2));
+  border-color: rgba(96, 165, 250, 0.4);
+  color: #60a5fa;
 }
 
 .about-hobbies {
@@ -194,6 +333,11 @@
   min-height: 100px;
 }
 
+.dark .hobby-card {
+  background: linear-gradient(135deg, rgba(96, 165, 250, 0.1), rgba(6, 182, 212, 0.1));
+  border-color: rgba(96, 165, 250, 0.3);
+}
+
 .hobby-card::before {
   content: '';
   position: absolute;
@@ -208,6 +352,11 @@
   transform: translateY(-4px);
   box-shadow: 0 12px 24px rgba(59, 130, 246, 0.25);
   background: linear-gradient(135deg, rgba(59, 130, 246, 0.12), rgba(6, 182, 212, 0.12));
+}
+
+.dark .hobby-card:hover {
+  box-shadow: 0 12px 24px rgba(96, 165, 250, 0.2), 0 0 30px rgba(96, 165, 250, 0.15);
+  background: linear-gradient(135deg, rgba(96, 165, 250, 0.15), rgba(6, 182, 212, 0.15));
 }
 
 .hobby-title {
@@ -225,6 +374,10 @@
   font-size: 1rem;
   color: #475569;
   font-weight: 500;
+}
+
+.dark .stat-label {
+  color: #94a3b8;
 }
 
 @keyframes fadeIn {
