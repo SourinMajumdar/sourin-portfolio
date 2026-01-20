@@ -1,17 +1,20 @@
 import React from 'react';
 import { ExternalLink, Github, Sparkles, ChevronDown, ChevronUp } from 'lucide-react';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Button } from './ui/button';
 import '../styles/Projects.css';
 
 const Projects = () => {
   const [showAll, setShowAll] = useState(false);
   const projectsRef = useRef(null);
+  const sectionRef = useRef(null);
   
   const handleToggle = () => {
+    const wasShowingAll = showAll;
     setShowAll(!showAll);
+    
     if (!showAll) {
-      // Scroll to show the new projects after a short delay
+      // Expanding - scroll to show the new projects after a short delay
       setTimeout(() => {
         const projectsSection = projectsRef.current;
         if (projectsSection) {
@@ -19,6 +22,13 @@ const Projects = () => {
           if (thirdCard) {
             thirdCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
           }
+        }
+      }, 100);
+    } else {
+      // Collapsing - scroll back to the projects section top
+      setTimeout(() => {
+        if (sectionRef.current) {
+          sectionRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       }, 100);
     }
@@ -43,6 +53,23 @@ const Projects = () => {
     },
     {
       id: 2,
+      title: 'Link in Bio',
+      subtitle: 'A personal landing page for all my social links',
+      description: 'A minimal and responsive Link-in-Bio web application that acts as a single hub for all my social profiles, portfolio, and important links. Designed with a clean UI, smooth animations, and mobile-first responsiveness for easy sharing.',
+      image: '/linkinbio.png', // update this to your actual screenshot
+      technologies: ['React.js', 'JavaScript', 'Vite', 'Framer Motion', 'CSS'],
+      features: [
+        'Centralized hub for social media, portfolio, and contact links',
+        'Mobile-first responsive design for seamless viewing on all devices',
+        'Smooth hover and entrance animations using Framer Motion',
+        'Clean, minimal UI optimized for fast loading and sharing',
+        'Deployed on Vercel for high availability'
+      ],
+      githubUrl: 'https://github.com/SourinMajumdar/SourinLinks', // update if repo name differs
+      liveUrl: 'https://sourinlinks.vercel.app/'
+    },
+    {
+      id: 3,
       title: 'Taskmate',
       subtitle: 'Todo Application',
       description: 'A beautiful and responsive single-page application for managing daily tasks. Built with React functional components and hooks, featuring a modern glassmorphism UI design.',
@@ -59,7 +86,7 @@ const Projects = () => {
       liveUrl: 'https://taskmateui.netlify.app/'
     },
     {
-      id: 3,
+      id: 4,
       title: 'TinDog',
       subtitle: 'Landing Page Design',
       description: 'A creative and responsive landing page for a fictional dog dating platform. Showcases clean UI/UX design principles and mobile-first development approach.',
@@ -76,11 +103,11 @@ const Projects = () => {
       liveUrl: 'https://sourinmajumdar.github.io/TinDog/'
     },
     {
-      id: 4,
+      id: 5,
       title: 'Simon Game',
       subtitle: 'Memory-Based Game',
       description:
-      'A classic Simon memory game recreated for the browser. Tests users’ memory by generating increasingly complex color sequences that must be repeated correctly.',
+      "A classic Simon memory game recreated for the browser. Tests users' memory by generating increasingly complex color sequences that must be repeated correctly.",
       image: '/simongame.png',
       technologies: ['HTML', 'CSS', 'JavaScript', 'jQuery'],
       features: [
@@ -93,11 +120,11 @@ const Projects = () => {
       liveUrl: 'https://sourinmajumdar.github.io/Simon-Game/'
     },
     {
-      id: 5,
+      id: 6,
       title: 'Drum Kit',
       subtitle: 'Keyboard-Driven Music App',
       description:
-      'An interactive drum kit web application that allows users to play drum sounds using keyboard keys or mouse clicks, focusing on event handling and audio integration.',
+      "An interactive drum kit web application that allows users to play drum sounds using keyboard keys or mouse clicks, focusing on event handling and audio integration.",
       image: '/drumkit.png',
       technologies: ['HTML', 'CSS', 'JavaScript'],
       features: [
@@ -110,7 +137,7 @@ const Projects = () => {
       liveUrl: 'https://sourinmajumdar.github.io/Drum-Kit/'
     },
     {
-      id: 6,
+      id: 7,
       title: 'Dice Game',
       subtitle: 'Interactive Browser Game',
       description:
@@ -131,7 +158,7 @@ const Projects = () => {
   const visibleProjects = showAll ? projects : projects.slice(0, 2);
 
   return (
-    <section id="projects" className="projects-section">
+    <section id="projects" className="projects-section" ref={sectionRef}>
       <div className="section-container">
         <div className="section-header">
           <h2 className="section-title">What I have built</h2>

@@ -1,5 +1,4 @@
 import React from 'react';
-// import { useState } from 'react';
 import { 
   Code2, Lightbulb, Target, Compass,
   Camera, Sprout, Luggage, Brush, 
@@ -10,8 +9,6 @@ import { FaCat } from "react-icons/fa";
 import '../styles/About.css';
 
 const About = () => {
-  // const [activeHobby, setActiveHobby] = useState(null);
-
   return (
     <section id="about" className="about-section">
       <div className="section-container">
@@ -25,7 +22,7 @@ const About = () => {
         <div className="about-content">
           <div className="about-text">
             <p className="about-intro">
-              I’m a Computer Science student at Vellore Institute of Technology with an interest in 
+              I'm a Computer Science student at Vellore Institute of Technology with an interest in 
               frontend development and problem-solving. I enjoy building intuitive interfaces and 
               exploring web development through hands-on projects, continuously learning 
               and refining my skills along the way.
@@ -62,29 +59,11 @@ const About = () => {
                 </div>
               </div>
             </div>
-
-            <div className="about-education">
-              <h3 className="education-title">Education</h3>
-              <div className="education-item">
-                <div className="education-degree">B.Tech in Computer Science and Engineering</div>
-                <div className="education-school">Vellore Institute of Technology - Amaravathi (AP)</div>
-                <div className="education-date">September 2020 - Present (Expected 2026)</div>
-              </div>
-              
-              <div className="education-item" style={{ marginTop: '24px' }}>
-                <div className="education-degree">High School and Senior School</div>
-                <div className="education-school">Kendriya Vidyalaya NFR Maligaon, Guwahati</div>
-                <p className="cbse">CBSE AISSCE (Class XII) 2020 - 91.2 %</p>
-                <p className="cbse">CBSE AISSE (Class X) 2020 - 94 %</p>
-                <div className="education-date">2009 - 2020</div>
-              </div>
-            </div>
           </div>
 
           <div className="about-hobbies">
             <h3 className="hobbies-title">Hobbies</h3>
             
-            {/* onClick={() => setActiveHobby("sketches")} */}
             <div className="hobby-card">
               <Camera size={28} color="#3b82f6"/>
               <div className="hobby-title">Photography · Nature</div>
@@ -103,13 +82,40 @@ const About = () => {
               <Music4Icon size={28} color="#06b6d4"/>
             </div>
 
-            <div className="hobby-card" onClick={() => setActiveHobby("games")}>
+            <div className="hobby-card">
               <Gamepad2 size={28} color="#3b82f6"/>
               <div className="hobby-title">Gaming</div>
               <Computer size={28} color="#06b6d4"/>
             </div>
           </div>
 
+        </div>
+
+        <div className="about-education-wrapper">
+          <div className="about-education">
+            <h3 className="education-title">Education</h3>
+            <div className="education-item">
+              <div className="education-header">
+                <div className="education-info">
+                  <div className="education-degree">B.Tech in Computer Science and Engineering</div>
+                  <div className="education-school">Vellore Institute of Technology - Amaravathi (AP)</div>
+                </div>
+                <div className="education-date-pill">Sep 2020 - 2026</div>
+              </div>
+            </div>
+            
+            <div className="education-item">
+              <div className="education-header">
+                <div className="education-info">
+                  <div className="education-degree">High School and Senior School</div>
+                  <div className="education-school">Kendriya Vidyalaya NFR Maligaon, Guwahati</div>
+                  <p className="cbse">CBSE AISSCE (Class XII) 2020 - 91.2 %</p>
+                  <p className="cbse">CBSE AISSE (Class X) 2020 - 94 %</p>
+                </div>
+                <div className="education-date-pill">2009 - 2020</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

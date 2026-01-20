@@ -8,6 +8,7 @@ import Projects from '../components/Projects';
 import Achievements from '../components/Achievements';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
+import AnimatedSection from '../components/AnimatedSection';
 import '../styles/Portfolio.css';
 
 const Portfolio = () => {
@@ -40,12 +41,24 @@ const Portfolio = () => {
     <div className="portfolio">
       <Navigation activeSection={activeSection} />
       <Hero />
-      <About />
-      <Skills />
-      <Experience />
-      <Projects />
-      <Achievements />
-      <Contact />
+      <AnimatedSection>
+        <About />
+      </AnimatedSection>
+      <AnimatedSection>
+        <Skills />
+      </AnimatedSection>
+      <AnimatedSection>
+        <Experience />
+      </AnimatedSection>
+      <AnimatedSection>
+        <Projects />
+      </AnimatedSection>
+      <AnimatedSection>
+        <Achievements />
+      </AnimatedSection>
+      <AnimatedSection>
+        <Contact />
+      </AnimatedSection>
       <Footer />
     </div>
   );

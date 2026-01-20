@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 import '../styles/Navigation.css';
 import signature from "../assets/sign.png"
 
@@ -31,6 +32,45 @@ const Navigation = ({ activeSection }) => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
       setIsMobileMenuOpen(false);
+    }
+  };
+
+  const menuVariants = {
+    closed: {
+      opacity: 0,
+      height: 0,
+      transition: {
+        duration: 0.3,
+        ease: "easeInOut",
+        when: "afterChildren"
+      }
+    },
+    open: {
+      opacity: 1,
+      height: "auto",
+      transition: {
+        duration: 0.3,
+        ease: "easeInOut",
+        when: "beforeChildren",
+        staggerChildren: 0.05
+      }
+    }
+  };
+
+  const menuItemVariants = {
+    closed: {
+      opacity: 0,
+      x: -20,
+      transition: {
+        duration: 0.2
+      }
+    },
+    open: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.3
+      }
     }
   };
 
@@ -66,19 +106,28 @@ const Navigation = ({ activeSection }) => {
         </button>
       </div>
 
-      {isMobileMenuOpen && (
-        <div className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
-          {navItems.map((item) => (
-            <button
-              key={item.id}
-              onClick={() => scrollToSection(item.id)}
-              className={`mobile-nav-link ${activeSection === item.id ? 'active' : ''}`}
-            >
-              {item.label}
-            </button>
-          ))}
-        </div>
-      )}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            className="mobile-menu"
+            variants={menuVariants}
+            initial="closed"
+            animate="open"
+            exit="closed"
+          >
+            {navItems.map((item) => (
+              <motion.button
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className={`mobile-nav-link ${activeSection === item.id ? 'active' : ''}`}
+                variants={menuItemVariants}
+              >
+                {item.label}
+              </motion.button>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 };
