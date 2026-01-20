@@ -1,11 +1,10 @@
 import React from 'react';
 import { 
-  Code2, Lightbulb, Target, Compass,
+  Lightbulb, Target, Compass,
   Camera, Sprout, Luggage, Brush, 
   Music4Icon, Bike, Gamepad2, 
 } 
 from 'lucide-react';
-import { FaCat } from "react-icons/fa";
 import { MdMovie } from "react-icons/md";
 import '../styles/About.css';
 
@@ -14,9 +13,7 @@ const About = () => {
     <section id="about" className="about-section">
       <div className="section-container">
         <div className="section-header">
-          <h2 className="section-title">
-            About Me<FaCat size={26} opacity={0.7}/>
-          </h2>
+          <h2 className="section-title"> About Me </h2>
           <div className="section-line"></div>
         </div>
 

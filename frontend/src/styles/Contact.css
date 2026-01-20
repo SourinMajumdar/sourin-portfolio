@@ -1,5 +1,5 @@
 .contact-section {
-  padding: 100px 0;
+  padding: 80px 0 100px;
   transition: background-color 0.6s ease;
   /* background-color: #0f1419; */
 }
@@ -244,11 +244,11 @@
 
 @media (max-width: 768px) {
   .contact-section {
-    padding: 80px 0;
+    padding: 60px 0 80px;
   }
 
   .contact-info-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 16px;
   }
 
@@ -260,15 +260,9 @@
     grid-template-columns: 1fr;
     gap: 20px;
   }
+}
 
-  /* Pill-shaped button in mobile */
-  .submit-btn {
-    border-radius: 50px;
-    width: 100%;
-    align-self: stretch;
-  }
-
-  .submit-btn {
-    width: 100%;
-  }
+.send-me-a-msg {display: flex; gap: 8px; align-items: center;}
+.send-me-a-msg span {
+  font-size: 1.5rem; font-weight: 500; color: #67a1ff;
 }

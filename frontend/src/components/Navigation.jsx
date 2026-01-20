@@ -30,8 +30,22 @@ const Navigation = ({ activeSection, isDarkMode, toggleDarkMode }) => {
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsMobileMenuOpen(false);
+      // Close menu first on mobile
+      if (isMobileMenuOpen) {
+        setIsMobileMenuOpen(false);
+      }
+      
+      // Scroll with offset for fixed nav
+      setTimeout(() => {
+        const navHeight = 80;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - navHeight;
+        
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }, isMobileMenuOpen ? 300 : 0); // Wait for menu to close on mobile
     }
   };
 

@@ -44,7 +44,7 @@
 }
 
 .nav-signature {
-  font-family: "Bonheur Royale", cursive;
+  font-family: "Bonheur Royale", cursive !important;
   font-weight: 400;
   font-style: normal;
 

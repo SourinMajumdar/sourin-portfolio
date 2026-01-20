@@ -6,15 +6,17 @@ import kombaiIcon from "../assets/kombai.png";
 import { VscVscode } from "react-icons/vsc";
 import { RiJavascriptFill } from "react-icons/ri";
 import {
+  DiCss3,
   DiJava,
   DiPython,
   DiHtml5,
-  DiCss3,
   DiReact,
   DiGit,
 } from "react-icons/di";
 
 import {
+  SiNpm,
+  SiTailwindcss,
   SiMysql,
   SiVite,
   SiFramer,
@@ -45,7 +47,9 @@ const Skills = () => {
       icon: <Component size={24} />,
       skills: [
         { name: "React", icon: <DiReact size={36} color="#61DAFB" /> },
-        { name: "Vite", icon: <SiVite size={36} color="#6f00af" /> },
+        
+        
+        { name: "Tailwind CSS", icon: <SiTailwindcss size={36} color="#1572B6" /> },
         { name: "Framer Motion", icon: <SiFramer size={36} color="#E91E63" /> },
         { name: "Bootstrap", icon: <SiBootstrap size={36} color="#7952B3" /> },
       ],
@@ -57,6 +61,8 @@ const Skills = () => {
         { name: "Git", icon: <DiGit size={36} color="#F05032" className="icon-git" /> },
         { name: "GitHub", icon: <SiGithub size={36} color="#181717" className="icon-github" /> },
         { name: "VS Code", icon: <VscVscode size={36} color="#007ACC" className="icon-vscode" /> },
+        { name: "npm", icon: <SiNpm size={36} color="#af0000" /> },
+        { name: "Vite", icon: <SiVite size={36} color="#6f00af" /> },
         { name: "Netlify", icon: <SiNetlify size={36} color="#00C7B7" className="icon-netlify" /> },
         { name: "Kombai", icon: kombaiIcon, size: 36 },
       ],
@@ -83,7 +89,6 @@ const Skills = () => {
                 {category.skills.map((skill, idx) => (
                   <div key={idx} className="skill-icon-item">
                     <div className="skill-icon">
-                      {/* ✅ FIX: handle JSX icons + image icons */}
                       {typeof skill.icon === "string" ? (
                         <img
                           src={skill.icon}

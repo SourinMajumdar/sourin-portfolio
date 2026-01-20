@@ -43,7 +43,7 @@
   background-size: cover;
   background-position: center;
 
-  opacity: 0.35;                 /* slightly higher for gradient visibility */
+  opacity: 0.35;                 
   filter: grayscale(70%) blur(2px);
 
   z-index: 0;

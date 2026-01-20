@@ -35,7 +35,7 @@ const Experience = () => {
                     className="experience-company-logo"
                   />
                   <div>
-                    <h3 className="experience-role">Frontend Developer Ambassador (Reddit-first)</h3>
+                    <h3 className="experience-role">Developer Ambassador (Frontend, Reddit-first)</h3>
                     <div className="experience-company">
                       Kombai
                       <span className="experience-meta">
@@ -201,7 +201,7 @@ const Experience = () => {
                   <span>Documentation</span>
                 </div>
                 <div className="highlight-chip">
-                  <Github size={16} className="icon-github" color="#181717" />
+                  <Github size={16} className="icon-github"/>
                   <span>Version Control (Git)</span>
                 </div>
                 <div className="highlight-chip">

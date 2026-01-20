@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Instagram, Linkedin, Github, Send, CheckCircle, UserRoundSearch } from "lucide-react";
+import { Instagram, Linkedin, Github, Send, CheckCircle, UserRoundSearch, MessageCircle } from "lucide-react";
 import { FaXTwitter } from "react-icons/fa6";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
@@ -119,6 +119,10 @@ const Contact = () => {
 
           <div className="contact-form-container">
             <form onSubmit={handleSubmit} className="contact-form">
+              <div className="send-me-a-msg">
+                <MessageCircle size={25} color="#67a1ff"/>
+                <span className="sendmeamsg">Send me a message!</span>
+              </div>
               {/* Hidden fields for EmailJS */}
               <input type="hidden" name="from_name" value={formData.name} />
               <input type="hidden" name="from_email" value={formData.email} />
@@ -191,7 +195,7 @@ const Contact = () => {
                 ) : (
                   <>
                     <Send size={20} />
-                    Send Message
+                    Send
                   </>
                 )}
               </Button>

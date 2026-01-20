@@ -226,7 +226,7 @@
 
 /* GitHub icon white in dark mode */
 .dark .icon-github {
-  color: #ffffff !important;
+  color: #22d3ee !important;
 }
 
 @media (max-width: 768px) {

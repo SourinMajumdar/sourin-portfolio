@@ -11,14 +11,17 @@ const AnimatedSection = ({ children, className = '' }) => {
     margin: "-100px"
   });
 
+  // Disable animation on mobile
+  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768;
+
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 50 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-      exit={{ opacity: 0, y: -50 }}
+      initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+      animate={isInView ? { opacity: 1, y: 0 } : (isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 })}
+      exit={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }}
       transition={{
-        duration: 0.6,
+        duration: isMobile ? 0 : 0.45,
         ease: "easeOut"
       }}
       className={className}
