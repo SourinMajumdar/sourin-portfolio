@@ -144,3 +144,41 @@
     font-size: 2rem;
   }
 }
+
+.achievement-btn {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  color: #3b82f6;
+  text-decoration: none;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.dark .achievement-btn {
+  border-color: rgba(96, 165, 250, 0.4);
+  color: #60a5fa;
+}
+
+.achievement-card:hover .achievement-btn {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.achievement-btn:hover {
+  background: rgba(59, 130, 246, 0.1);
+  border-color: rgba(59, 130, 246, 0.6);
+}
+
+.dark .achievement-btn:hover {
+  background: rgba(96, 165, 250, 0.1);
+  border-color: rgba(96, 165, 250, 0.6);
+}

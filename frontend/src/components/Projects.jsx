@@ -39,24 +39,40 @@ const Projects = () => {
       id: 1,
       title: 'Trackmate',
       subtitle: 'Job Application Tracker',
-      description: 'A comprehensive frontend web application designed to help job seekers track and manage their job applications efficiently. Features a clean dashboard interface with dynamic filtering and search capabilities.',
+      description: 'A serverless full-stack job application tracker built with React and Firebase, providing secure authentication, per-user data storage, real-time updates, and advanced filtering through an intuitive dashboard.',
       image: '/trackmate.png',
-      technologies: ['React.js', 'JavaScript', 'Vite', 'Framer Motion', 'localStorage'],
+      technologies: ['React.js', 'JavaScript', 'CSS', 'Firebase', 'Cloud Firestore'],
       features: [
-        'Add, edit, and search job applications, important dates',
-        'Status-based filtering system',
-        'Responsive dashboard UI with Flexbox, along with smooth animations',
-        'Client-side data persistence'
+        'Secure authentication with per-user accounts',
+        'Add, edit, delete and search job applications and important dates',
+        'Status-based filtering with interactive insights',
+        'Real-time cloud sync with per-user data isolation',
       ],
       githubUrl: 'https://github.com/SourinMajumdar/job-application-tracker',
       liveUrl: 'https://trackmateui.netlify.app/'
     },
     {
       id: 2,
+      title: 'Devmate',
+      subtitle: 'A centralized developer dashboard',
+      description: 'Devmate is a modern developer dashboard that brings projects, activity, and portfolio management into a single interface. It provides a clean workspace to manage and showcase development work, track recent activity, and visualize personal progress through a structured, dashboard-style experience.',
+      image: '/devmate.png', 
+      technologies: ['React.js', 'JavaScript', 'Vite', 'CSS'],
+      features: [
+        'Centralized dashboard for managing and showcasing developer projects',
+        'Editable developer profile with tech stack and personal details',
+        'Project management with add, edit, and delete workflows',
+        'Analytics snapshot and content timeline for activity tracking'
+      ],
+      githubUrl: 'https://github.com/SourinMajumdar/devmate',
+      liveUrl: 'https://devmateui.netlify.app/'
+    },
+    {
+      id: 3,
       title: 'Link in Bio',
       subtitle: 'A personal landing page for all my social links',
       description: 'A minimal and responsive Link-in-Bio web application that acts as a single hub for all my social profiles, portfolio, and important links. Designed with a clean UI, smooth animations, and mobile-first responsiveness for easy sharing.',
-      image: '/linkinbio.png', // update this to your actual screenshot
+      image: '/linkinbio.png', 
       technologies: ['React.js', 'JavaScript', 'Vite', 'Framer Motion', 'CSS'],
       features: [
         'Centralized hub for social media, portfolio, and contact links',
@@ -69,7 +85,7 @@ const Projects = () => {
       liveUrl: 'https://sourinlinks.vercel.app/'
     },
     {
-      id: 3,
+      id: 4,
       title: 'Taskmate',
       subtitle: 'Todo Application',
       description: 'A beautiful and responsive single-page application for managing daily tasks. Built with React functional components and hooks, featuring a modern glassmorphism UI design.',
@@ -86,7 +102,7 @@ const Projects = () => {
       liveUrl: 'https://taskmateui.netlify.app/'
     },
     {
-      id: 4,
+      id: 5,
       title: 'TinDog',
       subtitle: 'Landing Page Design',
       description: 'A creative and responsive landing page for a fictional dog dating platform. Showcases clean UI/UX design principles and mobile-first development approach.',
@@ -103,7 +119,7 @@ const Projects = () => {
       liveUrl: 'https://sourinmajumdar.github.io/TinDog/'
     },
     {
-      id: 5,
+      id: 6,
       title: 'Simon Game',
       subtitle: 'Memory-Based Game',
       description:
@@ -120,7 +136,7 @@ const Projects = () => {
       liveUrl: 'https://sourinmajumdar.github.io/Simon-Game/'
     },
     {
-      id: 6,
+      id: 7,
       title: 'Drum Kit',
       subtitle: 'Keyboard-Driven Music App',
       description:
@@ -137,7 +153,7 @@ const Projects = () => {
       liveUrl: 'https://sourinmajumdar.github.io/Drum-Kit/'
     },
     {
-      id: 7,
+      id: 8,
       title: 'Dice Game',
       subtitle: 'Interactive Browser Game',
       description:

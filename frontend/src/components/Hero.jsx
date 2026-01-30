@@ -1,6 +1,6 @@
 import React from 'react';
 import { 
-  Github, Linkedin, Mail, FileDown, 
+  Github, Linkedin, Mail, FileUser, 
   Code2, Target, Rocket, Instagram,
   Camera, Bike, Gamepad2, Bed, Hamburger,
   Music2Icon, Heart
@@ -32,8 +32,7 @@ const Hero = ({ isDarkMode }) => {
             <span className="typed-text">
               <Typewriter
                 words={[
-                  "Frontend Developer",
-                  "Web Development Enthusiast",
+                  "Web Developer",
                   "Artist",
                   "Photographer",
                   "Car and Bike Enthusiast",
@@ -48,7 +47,7 @@ const Hero = ({ isDarkMode }) => {
             </span>
           </h2>
           <p className="hero-description">
-            I build intuitive, user-focused web interfaces.
+            I build intuitive, user-focused web applications.
           </p>
 
           <div className="hero-cta">
@@ -83,11 +82,11 @@ const Hero = ({ isDarkMode }) => {
               <Instagram size={24} className="icon-instagram" />
             </a>
 
-            <a href="/Sourin_Majumdar_Resume.pdf"
-              download
+            <a href="https://drive.google.com/file/d/1IYnLgj2-wQTw5OMKKUVJ2B8_0ixizIEk/view?usp=sharing"
+              target='_blank'
               className="btn-secondary"
-            ><FileDown size={20} />
-              Download Resume
+            ><FileUser size={20} />
+              View my resume
             </a>
           </div>
 

@@ -9,7 +9,8 @@ const Achievements = () => {
       title: 'LeetCode problems solved',
       value: '900+',
       description: 'Highest contest rating of 1796',
-      color: '#ffa116'
+      color: '#ffa116',
+      link: 'https://leetcode.com/sourin_bruh'
     },
     {
       icon: <Trophy size={36} />,
@@ -48,6 +49,16 @@ const Achievements = () => {
                 <div className="achievement-value">{achievement.value}</div>
                 <h3 className="achievement-title">{achievement.title}</h3>
                 <p className="achievement-description">{achievement.description}</p>
+                {achievement.link && (
+                  <a
+                    href={achievement.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="achievement-btn"
+                  >
+                    View my Profile
+                  </a>
+                )}
               </div>
               <div className="achievement-glow" style={{ backgroundColor: achievement.color }}></div>
             </div>

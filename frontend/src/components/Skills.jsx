@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/Skills.css";
 import kombaiIcon from "../assets/kombai.png";
+import firebaseIcon from "../assets/firebasesvg.svg";
 
 // Devicon / Simple Icons
 import { VscVscode } from "react-icons/vsc";
@@ -65,6 +66,7 @@ const Skills = () => {
         { name: "Vite", icon: <SiVite size={36} color="#6f00af" /> },
         { name: "Netlify", icon: <SiNetlify size={36} color="#00C7B7" className="icon-netlify" /> },
         { name: "Kombai", icon: kombaiIcon, size: 36 },
+        { name: "Firebase", icon: firebaseIcon, size: 36 },
       ],
     },
   ];
