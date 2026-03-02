@@ -1,75 +1,63 @@
 .section-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 48px;
 }
 
 .section-header {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 64px;
+}
+
+.section-eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
 }
 
 .section-title {
   display: flex;
   align-items: center;
-  gap: 15px;
-  font-size: 2.5rem;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--font-heading);
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
   font-weight: 700;
-  color: #1b293f;
+  color: var(--text-primary);
   margin-bottom: 16px;
-  text-align: left;
-  text-shadow: 10px 10px 30px rgba(37, 99, 235, 0.6);
-  transition: all 0.6s ease;
-}
-
-.dark .section-title {
-  background: linear-gradient(135deg, #60a5fa, #a78bfa, #22d3ee);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-shadow: none;
-  filter: drop-shadow(0 0 20px rgba(96, 165, 250, 0.3));
+  letter-spacing: -0.03em;
 }
 
 .section-line {
+  width: 32px;
   height: 2px;
-  background: linear-gradient(90deg, #3b82f6, #06b6d4);
+  background: var(--accent-gradient);
   margin: 0 auto;
   border-radius: 2px;
-  opacity: 0.3;
-  transition: all 0.6s ease;
-}
-
-.dark .section-line {
-  background: linear-gradient(90deg, #60a5fa, #a78bfa, #22d3ee);
-  opacity: 0.5;
-  box-shadow: 0 0 10px rgba(96, 165, 250, 0.4);
 }
 
 .section-subtitle {
-  margin-top: 20px;
-  font-size: 1.1rem;
-  color: #64748b;
-  max-width: 600px;
+  margin-top: 16px;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  max-width: 520px;
   margin-left: auto;
   margin-right: auto;
-  transition: color 0.6s ease;
+  line-height: 1.7;
 }
 
-.dark .section-subtitle {
-  color: #94a3b8;
+/* Utility: alternating section bg */
+.section-alt {
+  background: var(--bg-elevated);
 }
 
 @media (max-width: 768px) {
-  .section-container {
-    padding: 0 20px;
-  }
-
-  .section-title {
-    font-size: 2rem;
-  }
-
-  .section-header {
-    margin-bottom: 40px;
-  }
+  .section-container { padding: 0 20px; }
+  .section-title { font-size: 1.75rem; }
+  .section-header { margin-bottom: 44px; }
 }

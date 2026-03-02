@@ -7,7 +7,7 @@ const Achievements = () => {
     {
       icon: <SiLeetcode size={36} />,
       title: 'LeetCode problems solved',
-      value: '900+',
+      value: '1000+',
       description: 'Highest contest rating of 1796',
       color: '#ffa116',
       link: 'https://leetcode.com/sourin_bruh'
@@ -22,7 +22,7 @@ const Achievements = () => {
     {
       icon: <Code2 size={36} />,
       title: 'Problems Solved',
-      value: '1300+',
+      value: '1400+',
       description: 'Across multiple coding platforms',
       color: '#5859b0'
     }

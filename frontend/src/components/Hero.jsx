@@ -1,125 +1,87 @@
 import React from 'react';
-import { 
-  Github, Linkedin, Mail, FileUser, 
-  Code2, Target, Rocket, Instagram,
-  Camera, Bike, Gamepad2, Bed, Hamburger,
-  Music2Icon, Heart
-
-} from 'lucide-react';
+import { Github, Linkedin, FileUser, Instagram } from 'lucide-react';
 import { Typewriter } from "react-simple-typewriter";
-// import { Button } from './ui/button';
 import '../styles/Hero.css';
-import ParticleNetwork from './ParticleNetwork';
 
-const Hero = ({ isDarkMode }) => {
-  const scrollToContact = () => {
-    const element = document.getElementById('contact');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
+const Hero = () => {
   return (
     <section id="home" className="hero-section">
-      {isDarkMode && <ParticleNetwork />}
+      {/* Aurora ambient orbs */}
+      <div className="hero-aurora hero-aurora-1" aria-hidden="true"></div>
+      <div className="hero-aurora hero-aurora-2" aria-hidden="true"></div>
+      <div className="hero-aurora hero-aurora-3" aria-hidden="true"></div>
+      <div className="hero-aurora hero-aurora-4" aria-hidden="true"></div>
+
       <div className="hero-container">
-        <div className="hero-content">
-          <div className="hero-greeting">
-            Hi, I'm
-          </div>
-          <h1 className="hero-name">Sourin Majumdar</h1>
-          <h2 className="hero-title">
-            <span className="typed-text">
-              <Typewriter
-                words={[
-                  "Web Developer",
-                  "Artist",
-                  "Photographer",
-                  "Car and Bike Enthusiast",
-                ]}
-                loop={0}
-                cursor
-                cursorStyle="|"
-                typeSpeed={80}
-                deleteSpeed={50}
-                delaySpeed={1500}
-              />
-            </span>
-          </h2>
-          <p className="hero-description">
-            I build intuitive, user-focused web applications.
-          </p>
+        <p className="hero-greeting">Hi, I'm</p>
+        <h1 className="hero-name">Sourin Majumdar</h1>
+        <h2 className="hero-title">
+          <span className="typed-text">
+            <Typewriter
+              words={[
+                "Web Developer",
+                "Artist",
+                "Photographer",
+                "Car & Bike Enthusiast",
+              ]}
+              loop={0}
+              cursor
+              cursorStyle="|"
+              typeSpeed={80}
+              deleteSpeed={50}
+              delaySpeed={1500}
+            />
+          </span>
+        </h2>
+        <p className="hero-description">
+          I build intuitive, user-focused web applications.
+        </p>
 
-          <div className="hero-cta">
-            {/* <Button onClick={scrollToContact} className="btn-primary">
-              <Mail size={20} />
-              Let's Connect
-            </Button> */}
-            <a 
-              href="https://github.com/SourinMajumdar" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="social-link social-link-github"
-              aria-label="GitHub"
-            >
-              <Github size={24} className="icon-github" />
-            </a>
-            <a 
-              href="https://linkedin.com/in/sourinmajumdar" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="social-link social-link-linkedin"
-              aria-label="LinkedIn"
-            >
-              <Linkedin size={24} className="icon-linkedin" />
-            </a>
-            <a 
-              href="https://www.instagram.com/sourinsig/"
-              target='_blank'
-              className="social-link social-link-instagram"
-              aria-label="Instagram"
-            >
-              <Instagram size={24} className="icon-instagram" />
-            </a>
+        <div className="hero-cta">
+          <a
+            href="https://github.com/SourinMajumdar"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-link"
+            aria-label="GitHub"
+          >
+            <Github size={18} />
+          </a>
+          <a
+            href="https://linkedin.com/in/sourinmajumdar"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-link"
+            aria-label="LinkedIn"
+          >
+            <Linkedin size={18} />
+          </a>
+          <a
+            href="https://www.instagram.com/sourinsig/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-link"
+            aria-label="Instagram"
+          >
+            <Instagram size={18} />
+          </a>
 
-            <a href="https://drive.google.com/file/d/1IYnLgj2-wQTw5OMKKUVJ2B8_0ixizIEk/view?usp=sharing"
-              target='_blank'
-              className="btn-secondary"
-            ><FileUser size={20} />
-              View my resume
-            </a>
-          </div>
-
-          {/* <div className="hero-social"> */}
-          {/* </div> */}
+          <a
+            href="https://drive.google.com/file/d/1IYnLgj2-wQTw5OMKKUVJ2B8_0ixizIEk/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-link resume-link"
+          >
+            <FileUser size={18} />
+            View Resume
+          </a>
         </div>
 
-        <div className="hero-visual">
-          <div className="floating-card camera">
-            <Camera size={40} className="card-icon-svg card-icon-camera" />
-          </div>
-          <div className="floating-card bike">
-            <Bike size={40} className="card-icon-svg card-icon-bike" />
-          </div>
-          <div className="floating-card game">
-            <Gamepad2 size={40} className="card-icon-svg card-icon-game" />
-          </div>
-          <div className="floating-card code">
-            <Code2 size={40} className="card-icon-svg card-icon-code" />
-          </div>
-          <div className="floating-card bed">
-            <Bed size={40} className="card-icon-svg card-icon-bed" />
-          </div>
-          <div className="floating-card ham">
-            <Hamburger size={40} className="card-icon-svg card-icon-ham" />
-          </div>
-          <div className="floating-card music">
-            <Music2Icon size={40} className="card-icon-svg card-icon-music" />
-          </div>
-          <div className="floating-card love">
-            <Heart size={40} className="card-icon-svg card-icon-love" />
-          </div>
-        </div>
+        {/* Available badge */}
+        {/* <div className="hero-available">
+          <span className="available-dot"></span>
+          <span>Open to opportunities</span>
+        </div> */}
       </div>
 
       <div className="scroll-indicator">

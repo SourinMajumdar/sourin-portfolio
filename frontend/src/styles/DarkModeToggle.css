@@ -1,31 +1,27 @@
 .dark-mode-toggle {
-  background: none;
-  border: 2px solid rgba(59, 130, 246, 0.3);
-  border-radius: 50%;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
   width: 40px;
   height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all 0.3s ease;
-  color: #3b82f6;
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+  color: var(--text-secondary);
   padding: 0;
 }
 
 .dark-mode-toggle:hover {
-  background-color: rgba(59, 130, 246, 0.1);
-  border-color: #3b82f6;
-  box-shadow: 0 0 10px rgba(59, 130, 246, 0.2);
+  border-color: var(--accent-border);
+  color: var(--accent);
+  background: var(--accent-bg);
+  box-shadow: 0 0 0 3px var(--accent-bg);
 }
 
-.dark-mode-toggle.desktop {
-  margin-left: 12px;
-}
-
-.dark-mode-toggle.mobile {
-  margin-right: 12px;
-}
+.dark-mode-toggle.desktop { margin-left: 0; }
+.dark-mode-toggle.mobile  { margin-right: 0; }
 
 .toggle-icon-wrapper {
   display: flex;
@@ -35,34 +31,11 @@
   height: 100%;
 }
 
-.toggle-icon {
-  color: #3b82f6;
-}
-
-/* Dark mode styles */
-.dark .dark-mode-toggle {
-  border-color: rgba(59, 130, 246, 0.4);
-  color: #60a5fa;
-}
-
-.dark .dark-mode-toggle:hover {
-  background-color: rgba(59, 130, 246, 0.15);
-  border-color: #60a5fa;
-  box-shadow: 0 0 15px rgba(96, 165, 250, 0.3);
-}
-
-.dark .toggle-icon {
-  color: #60a5fa;
-}
+.toggle-icon { color: inherit; }
 
 @media (max-width: 768px) {
   .dark-mode-toggle {
     width: 36px;
     height: 36px;
-  }
-  
-  .toggle-icon {
-    width: 18px;
-    height: 18px;
   }
 }

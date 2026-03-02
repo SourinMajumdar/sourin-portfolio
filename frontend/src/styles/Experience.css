@@ -1,21 +1,14 @@
 .experience-section {
-  padding: 100px 0;
-  background-color: #ffffff;
-  transition: background-color 0.6s ease;
+  padding: 108px 0;
+  background: var(--bg);
+  transition: background 0.4s ease;
 }
 
-.dark .experience-section {
-  background-color: #0f172a;
-}
-
-.experience-content {
-  max-width: 900px;
-  margin: 0 auto;
-}
+.experience-content { max-width: 860px; margin: 0 auto; }
 
 .timeline {
   position: relative;
-  padding-left: 40px;
+  padding-left: 32px;
 }
 
 .timeline-line {
@@ -23,176 +16,142 @@
   left: 0;
   top: 0;
   bottom: 0;
-  width: 2px;
-  background: linear-gradient(180deg, #3b82f6, #06b6d4);
+  width: 1px;
+  background: var(--border);
 }
 
 .experience-card {
   position: relative;
-  padding: 32px;
-  background: #f8fafc;
-  border: 1px solid rgba(59, 130, 246, 0.2);
-  border-radius: 12px;
-  margin-bottom: 32px;
-  transition: all 0.3s ease;
+  padding: 28px 32px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  margin-bottom: 20px;
+  transition: all 0.2s ease;
 }
 
-.dark .experience-card {
-  background: #1e293b;
-  border-color: rgba(96, 165, 250, 0.3);
-}
+.dark .experience-card { background: var(--bg-elevated); }
 
 .experience-card:hover {
-  transform: translateX(8px);
-  border-color: rgba(59, 130, 246, 0.4);
-  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.15);
-}
-
-.dark .experience-card:hover {
-  border-color: rgba(96, 165, 250, 0.5);
-  box-shadow: 0 8px 24px rgba(96, 165, 250, 0.2), 0 0 25px rgba(96, 165, 250, 0.12);
+  border-color: var(--accent-border);
+  box-shadow: var(--shadow-hover);
+  transform: translateX(4px);
 }
 
 .experience-dot {
   position: absolute;
-  left: -46px;
-  top: 40px;
-  width: 16px;
-  height: 16px;
-  background: #3b82f6;
-  border: 3px solid #ffffff;
+  left: -36px;
+  top: 34px;
+  width: 10px;
+  height: 10px;
+  background: var(--accent);
+  border: 2px solid var(--bg);
   border-radius: 50%;
-  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
-}
-
-.dark .experience-dot {
-  background: #60a5fa;
-  border-color: #0f172a;
-  box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.3);
+  box-shadow: 0 0 0 3px var(--accent-bg);
 }
 
 .experience-header {
   display: flex;
   justify-content: space-between;
-  align-items: start;
-  margin-bottom: 20px;
+  align-items: flex-start;
+  margin-bottom: 14px;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 12px;
 }
 
-.experience-title-group {
-  flex: 1;
-}
+.experience-title-group { flex: 1; }
 
 .experience-title-group.with-logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
 }
 
 .experience-company-logo {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   object-fit: contain;
-  border-radius: 6px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-surface);
   flex-shrink: 0;
 }
 
-.experience-meta {
-  font-size: 1rem;
-  font-style: oblique;
-  color: #585c63; /* subtle gray */
-  font-weight: 400;
-}
-
-.dark .experience-meta {
-  color: #94a3b8;
-}
-
 .experience-role {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   font-weight: 700;
-  color: #1e293b;
-  margin-bottom: 8px;
-}
-
-.dark .experience-role {
-  color: #e2e8f0;
+  color: var(--text-primary);
+  margin-bottom: 5px;
 }
 
 .experience-company {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 1.1rem;
-  color: #3b82f6;
+  gap: 6px;
+  font-size: 0.9rem;
+  color: var(--accent);
   font-weight: 500;
 }
 
-.dark .experience-company {
-  color: #60a5fa;
+.experience-meta {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-weight: 400;
+  font-style: normal;
 }
 
 .experience-date {
-  font-size: 0.95rem;
-  color: #64748b;
-  padding: 6px 12px;
-  background: rgba(59, 130, 246, 0.1);
-  border-radius: 20px;
+  font-size: 0.78rem;
+  color: var(--accent);
+  padding: 4px 10px;
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-border);
+  border-radius: var(--radius-full);
   white-space: nowrap;
-}
-
-.dark .experience-date {
-  color: #94a3b8;
-  background: rgba(96, 165, 250, 0.15);
+  font-weight: 500;
+  align-self: flex-start;
 }
 
 .experience-description {
-  font-size: 1rem;
-  line-height: 1.7;
-  color: #475569;
-  margin-bottom: 20px;
-}
-
-.dark .experience-description {
-  color: #94a3b8;
+  font-size: 0.9rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  margin-bottom: 14px;
 }
 
 .experience-highlights {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 24px;
+  gap: 7px;
+  margin-bottom: 16px;
 }
 
 .highlight-chip {
   display: flex;
   align-items: center;
-  gap: 6px;
-  padding: 8px 14px;
-  background: rgba(6, 182, 212, 0.1);
-  border: 1px solid rgba(6, 182, 212, 0.3);
-  border-radius: 20px;
-  color: #0891b2;
-  font-size: 0.85rem;
+  gap: 5px;
+  padding: 4px 11px;
+  background: rgba(34, 197, 94, 0.07);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  border-radius: var(--radius-full);
+  color: #16A34A;
+  font-size: 0.78rem;
   font-weight: 500;
 }
 
 .dark .highlight-chip {
-  background: rgba(6, 182, 212, 0.15);
-  border-color: rgba(6, 182, 212, 0.4);
-  color: #22d3ee;
+  background: rgba(74, 222, 128, 0.08);
+  border-color: rgba(74, 222, 128, 0.15);
+  color: #4ADE80;
 }
 
 .experience-achievements h4 {
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   font-weight: 600;
-  color: #1e293b;
-  margin-bottom: 12px;
-}
-
-.dark .experience-achievements h4 {
-  color: #e2e8f0;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 
 .experience-achievements ul {
@@ -201,56 +160,27 @@
 }
 
 .experience-achievements li {
-  padding-left: 24px;
-  margin-bottom: 10px;
-  color: #64748b;
-  line-height: 1.6;
+  padding-left: 18px;
+  margin-bottom: 7px;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  font-size: 0.875rem;
   position: relative;
-}
-
-.dark .experience-achievements li {
-  color: #94a3b8;
 }
 
 .experience-achievements li::before {
   content: '▹';
   position: absolute;
   left: 0;
-  color: #3b82f6;
-  font-size: 1.2rem;
-}
-
-.dark .experience-achievements li::before {
-  color: #60a5fa;
-}
-
-/* GitHub icon white in dark mode */
-.dark .icon-github {
-  color: #22d3ee !important;
+  color: var(--accent);
+  font-size: 0.9rem;
 }
 
 @media (max-width: 768px) {
-  .experience-section {
-    padding: 80px 0;
-  }
-
-  .timeline {
-    padding-left: 24px;
-  }
-
-  .experience-dot {
-    left: -32px;
-  }
-
-  .experience-card {
-    padding: 24px;
-  }
-
-  .experience-role {
-    font-size: 1.3rem;
-  }
-
-  .experience-header {
-    flex-direction: column;
-  }
+  .experience-section { padding: 72px 0; }
+  .timeline { padding-left: 20px; }
+  .experience-dot { left: -25px; }
+  .experience-card { padding: 20px; }
+  .experience-role { font-size: 1rem; }
+  .experience-header { flex-direction: column; }
 }

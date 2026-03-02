@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Portfolio from './pages/Portfolio.jsx';
+import AllProjects from './pages/AllProjects.jsx';
 import './App.css';
 import ScrollToTop from "./components/ScrollToTop";
 import IntroAnimation from './components/IntroAnimation';
@@ -40,6 +41,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Portfolio isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />} />
+          <Route path="/projects" element={<AllProjects isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />} />
         </Routes>
         <ScrollToTop/>
       </BrowserRouter>

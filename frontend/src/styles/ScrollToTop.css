@@ -1,21 +1,23 @@
 .scroll-to-top {
   position: fixed;
-  bottom: 24px;
-  right: 24px;
+  bottom: 28px;
+  right: 28px;
   z-index: 1000;
 
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
 
-  background: rgba(59, 130, 246, 0.9);
-  color: #fff;
-  border: none;
+  background: var(--accent-bg);
+  color: var(--accent);
+  border: 1px solid var(--accent-border);
   cursor: pointer;
 
   display: flex;
   align-items: center;
   justify-content: center;
+
+  box-shadow: var(--shadow-md);
 
   opacity: 0;
   pointer-events: none;
@@ -24,7 +26,8 @@
   transition:
     opacity 0.3s ease,
     transform 0.3s ease,
-    box-shadow 0.3s ease;
+    background 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .scroll-to-top.show {
@@ -34,12 +37,11 @@
 }
 
 .scroll-to-top:hover {
-  box-shadow: 0 12px 30px rgba(59, 130, 246, 0.4);
+  background: var(--accent-bg);
+  box-shadow: var(--shadow-hover);
   transform: translateY(-3px);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .scroll-to-top {
-    transition: none;
-  }
+  .scroll-to-top { transition: none; }
 }

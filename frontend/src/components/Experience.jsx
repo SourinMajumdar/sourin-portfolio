@@ -201,7 +201,7 @@ const Experience = () => {
                   <span>Documentation</span>
                 </div>
                 <div className="highlight-chip">
-                  <Github size={16} className="icon-github"/>
+                  <Github size={16} />
                   <span>Version Control (Git)</span>
                 </div>
                 <div className="highlight-chip">

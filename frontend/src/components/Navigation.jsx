@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import '../styles/Navigation.css';
 import DarkModeToggle from './DarkModeToggle';
 
-const Navigation = ({ activeSection, isDarkMode, toggleDarkMode }) => {
+const Navigation = ({ activeSection, isDarkMode, toggleDarkMode, isStandalonePage = false }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,6 +30,20 @@ const Navigation = ({ activeSection, isDarkMode, toggleDarkMode }) => {
   ];
 
   const scrollToSection = (sectionId) => {
+    if (isStandalonePage) {
+      // On standalone pages, navigate to portfolio with hash
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const navHeight = 80;
+          const offsetPosition = element.getBoundingClientRect().top + window.pageYOffset - navHeight;
+          window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+        }
+      }, 100);
+      return;
+    }
+
     const element = document.getElementById(sectionId);
     if (element) {
       // Close menu first on mobile
@@ -92,10 +108,11 @@ const Navigation = ({ activeSection, isDarkMode, toggleDarkMode }) => {
     <nav className={`navigation ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
         <div className="nav-logo" onClick={() => scrollToSection('home')}>
-          <span className="nav-signature">Sourin Majumdar</span>
+          <span className="nav-signature">SM</span>
         </div>
 
-        <div className="nav-links desktop-nav">
+        {/* Pill nav — desktop only */}
+        <div className="nav-pill desktop-nav">
           {navItems.map((item) => (
             <button
               key={item.id}
@@ -105,6 +122,10 @@ const Navigation = ({ activeSection, isDarkMode, toggleDarkMode }) => {
               {item.label}
             </button>
           ))}
+        </div>
+
+        {/* Theme toggle — desktop right side */}
+        <div className="nav-actions desktop-nav">
           <DarkModeToggle isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
         </div>
 
