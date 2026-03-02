@@ -1,9 +1,8 @@
 import React from 'react';
 
 import { 
-  BookmarkCheck, Github, GitBranch, 
-  Users, FileText, GitPullRequest, 
-  PenLine , Database, Search
+  BookmarkCheck, Github, FileText, PaletteIcon,Code2,
+  PenLine , Database, Search, PersonStanding, Brain,
 } from 'lucide-react';
 
 import '../styles/Experience.css';
@@ -35,7 +34,7 @@ const Experience = () => {
                     className="experience-company-logo"
                   />
                   <div>
-                    <h3 className="experience-role">Developer Ambassador (Frontend, Reddit-first)</h3>
+                    <h3 className="experience-role">Web Developer & Ambassador</h3>
                     <div className="experience-company">
                       Kombai
                       <span className="experience-meta">
@@ -54,6 +53,28 @@ const Experience = () => {
                   frontend tool and sharing demos and technical breakdowns on Reddit 
                   to engage the developer community.
                 </p>
+              </div>
+              <div className="experience-highlights">
+                <div className="highlight-chip">
+                  <Code2 size={16} />
+                  <span>Web Development</span>
+                </div>
+                <div className="highlight-chip">
+                  <PaletteIcon size={16} />
+                  <span>UI / UX</span>
+                </div>
+                <div className="highlight-chip">
+                  <Github size={16} />
+                  <span>Version Control (Git)</span>
+                </div>
+                <div className="highlight-chip">
+                  <Brain size={16} />
+                  <span>AI tools</span>
+                </div>
+                <div className="highlight-chip">
+                  <PersonStanding size={16} />
+                  <span>Community Engagement</span>
+                </div>
               </div>
 
               {/* <div className="experience-highlights">
@@ -75,15 +96,14 @@ const Experience = () => {
                 </div>
               </div> */}
 
-              {/* <div className="experience-achievements">
+              <div className="experience-achievements">
                 <h4>Key Contributions:</h4>
                 <ul>
-                  <li>Enhanced and maintained technical documentation for DSA learning resources</li>
-                  <li>Reviewed codebases and issue discussions to improve overall code quality</li>
-                  <li>Worked with Git-based workflows including pull requests and reviews</li>
-                  <li>Contributed effectively in a distributed open-source team environment</li>
+                  <li>Built production-ready MVPs using Kombai's AI-powered frontend tool, accelerating UI development workflows</li>
+                  <li>Created and shared technical demos and breakdowns on Reddit, growing developer awareness and driving community engagement</li>
+                  <li>Tested and provided feedback on Kombai's tool from a real developer's perspective, contributing to product improvement</li>
                 </ul>
-              </div> */}
+              </div>
             </div>
           </div>
         </div>
