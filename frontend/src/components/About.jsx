@@ -60,7 +60,7 @@ const About = () => {
           </div>
 
           <div className="about-hobbies">
-            <h3 className="hobbies-title">Hobbies</h3>
+            <h3 className="hobbies-title">Interests</h3>
             
             <div className="hobby-card">
               <Camera size={28} className="hobby-icon hobby-icon-camera"/>
