@@ -120,7 +120,7 @@ const Contact = () => {
           <div className="contact-form-container">
             <form onSubmit={handleSubmit} className="contact-form">
               <div className="send-me-a-msg">
-                <MessageCircle size={25} color="#67a1ff"/>
+                <MessageCircle size={25} color="var(--accent)" />
                 <span className="sendmeamsg">Send me a message!</span>
               </div>
               {/* Hidden fields for EmailJS */}

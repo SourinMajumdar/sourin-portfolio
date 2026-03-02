@@ -42,6 +42,15 @@
   transform: translateY(-3px);
 }
 
+@media (max-width: 768px) {
+  .scroll-to-top {
+    bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+    right: 16px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .scroll-to-top { transition: none; }
 }

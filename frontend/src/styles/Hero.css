@@ -115,6 +115,10 @@
   text-transform: uppercase;
 }
 
+.dark .hero-greeting {
+  color: var(--text-secondary);
+}
+
 .hero-name {
   font-family: var(--font-heading);
   font-size: clamp(3rem, 7vw, 4.5rem);
@@ -129,7 +133,7 @@
 }
 
 .dark .hero-name {
-  background: linear-gradient(145deg, #F0F0F0 0%, #7879FF 55%, #B09BFF 100%);
+  background: linear-gradient(145deg, #F0F0F0 0%, var(--accent) 55%, var(--accent-violet) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -145,10 +149,7 @@
 }
 
 .typed-text {
-  background: var(--accent-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--accent);
   font-weight: 600;
 }
 
@@ -297,4 +298,42 @@
   .hero-name { font-size: 2.75rem; }
   .hero-title { font-size: 1.2rem; }
   .hero-cta-divider { display: none; }
+
+  /* Scale down aurora orbs to match mobile viewport */
+  .hero-aurora-1 {
+    width: 320px;
+    height: 320px;
+    background: radial-gradient(circle at center, rgba(87, 87, 232, 0.18) 0%, transparent 65%);
+    top: -10%;
+    right: -20%;
+  }
+  .hero-aurora-2 {
+    width: 260px;
+    height: 260px;
+    background: radial-gradient(circle at center, rgba(148, 116, 255, 0.14) 0%, transparent 65%);
+    bottom: -5%;
+    left: -15%;
+  }
+  /* Hide the two smaller orbs on mobile to reduce clutter */
+  .hero-aurora-3,
+  .hero-aurora-4 { display: none; }
+
+  /* Dark mode mobile orbs */
+  .dark .hero-aurora-1 {
+    background: radial-gradient(circle at center, rgba(120, 121, 255, 0.2) 0%, transparent 65%);
+  }
+  .dark .hero-aurora-2 {
+    background: radial-gradient(circle at center, rgba(167, 139, 250, 0.15) 0%, transparent 65%);
+  }
+
+  /* Tone down particles on mobile */
+  .particle-network { opacity: 0.15; }
+
+  /* Soften dot grid on mobile */
+  .hero-section::before {
+    background-image: radial-gradient(circle, rgba(87, 87, 232, 0.07) 1px, transparent 1px);
+  }
+  .dark .hero-section::before {
+    background-image: radial-gradient(circle, rgba(120, 121, 255, 0.06) 1px, transparent 1px);
+  }
 }

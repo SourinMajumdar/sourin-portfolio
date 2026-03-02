@@ -108,7 +108,7 @@ const Navigation = ({ activeSection, isDarkMode, toggleDarkMode, isStandalonePag
     <nav className={`navigation ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
         <div className="nav-logo" onClick={() => scrollToSection('home')}>
-          <span className="nav-signature">SM</span>
+          <span className="nav-signature">SM.</span>
         </div>
 
         {/* Pill nav — desktop only */}

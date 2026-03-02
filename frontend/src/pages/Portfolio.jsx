@@ -12,7 +12,7 @@ import Footer from '../components/Footer';
 import AnimatedSection from '../components/AnimatedSection';
 import '../styles/Portfolio.css';
 
-const Portfolio = ({ isDarkMode, toggleDarkMode }) => {
+const Portfolio = ({ isDarkMode, toggleDarkMode, accentId, changeAccent }) => {
   const [activeSection, setActiveSection] = useState('home');
   const location = useLocation();
 
@@ -58,7 +58,7 @@ const Portfolio = ({ isDarkMode, toggleDarkMode }) => {
         isDarkMode={isDarkMode} 
         toggleDarkMode={toggleDarkMode} 
       />
-      <Hero isDarkMode={isDarkMode} />
+      <Hero isDarkMode={isDarkMode} accentId={accentId} changeAccent={changeAccent} />
       <AnimatedSection>
         <About />
       </AnimatedSection>

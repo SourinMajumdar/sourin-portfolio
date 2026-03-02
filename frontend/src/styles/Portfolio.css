@@ -61,3 +61,7 @@
   .section-title { font-size: 1.75rem; }
   .section-header { margin-bottom: 44px; }
 }
+
+.portfolio {
+  overflow-x: hidden;
+}

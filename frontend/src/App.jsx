@@ -6,10 +6,12 @@ import './App.css';
 import ScrollToTop from "./components/ScrollToTop";
 import IntroAnimation from './components/IntroAnimation';
 import useDarkMode from './hooks/useDarkMode.jsx';
+import useAccentColor from './hooks/useAccentColor.jsx';
 
 function App() {
   const [showIntro, setShowIntro] = useState(true);
   const [isDarkMode, toggleDarkMode] = useDarkMode();
+  const [accentId, changeAccent] = useAccentColor();
 
   useEffect(() => {
     const originalTitle = document.title;
@@ -40,7 +42,7 @@ function App() {
       {/* Main content */}
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Portfolio isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />} />
+          <Route path="/" element={<Portfolio isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} accentId={accentId} changeAccent={changeAccent} />} />
           <Route path="/projects" element={<AllProjects isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />} />
         </Routes>
         <ScrollToTop/>

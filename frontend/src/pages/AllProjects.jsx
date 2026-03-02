@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ExternalLink, Github, Sparkles, ArrowLeft } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -11,6 +11,11 @@ import '../styles/AllProjects.css';
 
 const AllProjects = ({ isDarkMode, toggleDarkMode }) => {
   const navigate = useNavigate();
+
+  // Reset scroll position when page mounts
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, []);
 
   const containerVariants = {
     hidden: {},
@@ -40,13 +45,10 @@ const AllProjects = ({ isDarkMode, toggleDarkMode }) => {
             <ArrowLeft size={18} />
             Back to Portfolio
           </button>
-          <h1 className="all-projects-title">All Projects</h1>
+          <h1 className="all-projects-title">All my Projects</h1>
           <p className="all-projects-subtitle">
-            A complete showcase of my work — {projects.length} projects built with modern technologies
+            A complete showcase of my works.
           </p>
-          <div className="all-projects-count">
-            <span className="count-badge">{projects.length} Projects</span>
-          </div>
         </div>
 
         {/* Projects grid */}

@@ -1,11 +1,16 @@
 import React from 'react';
 import { Github, Linkedin, FileUser, Instagram } from 'lucide-react';
 import { Typewriter } from "react-simple-typewriter";
+import ColorPicker from './ColorPicker';
+import ParticleNetwork from './ParticleNetwork';
 import '../styles/Hero.css';
 
-const Hero = () => {
+const Hero = ({ accentId, changeAccent }) => {
   return (
     <section id="home" className="hero-section">
+      {/* Particle network */}
+      <ParticleNetwork />
+
       {/* Aurora ambient orbs */}
       <div className="hero-aurora hero-aurora-1" aria-hidden="true"></div>
       <div className="hero-aurora hero-aurora-2" aria-hidden="true"></div>
@@ -34,7 +39,7 @@ const Hero = () => {
           </span>
         </h2>
         <p className="hero-description">
-          I build intuitive, user-focused web applications.
+          I build clean, intuitive, user-focused web applications.
         </p>
 
         <div className="hero-cta">
@@ -78,10 +83,12 @@ const Hero = () => {
         </div>
 
         {/* Available badge */}
-        {/* <div className="hero-available">
+          {/* <div className="hero-available">
           <span className="available-dot"></span>
           <span>Open to opportunities</span>
         </div> */}
+
+        <ColorPicker accentId={accentId} changeAccent={changeAccent} />
       </div>
 
       <div className="scroll-indicator">
