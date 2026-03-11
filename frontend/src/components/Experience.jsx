@@ -49,7 +49,7 @@ const Experience = () => {
 
               <div className="experience-description">
                 <p>
-                  Building non-generic, real-world MVPs using Kombai’s AI-powered
+                  Built non-generic, real-world MVPs using Kombai’s AI-powered
                   frontend tool and sharing demos and technical breakdowns on Reddit 
                   to engage the developer community.
                 </p>
@@ -99,7 +99,7 @@ const Experience = () => {
               <div className="experience-achievements">
                 <h4>Key Contributions:</h4>
                 <ul>
-                  <li>Built production-ready MVPs using Kombai's AI-powered frontend tool, accelerating UI development workflows</li>
+                  <li>Built and deployed production-ready MVPs using Kombai's AI-powered frontend tool, accelerating UI development workflows</li>
                   <li>Created and shared technical demos and breakdowns on Reddit, growing developer awareness and driving community engagement</li>
                   <li>Tested and provided feedback on Kombai's tool from a real developer's perspective, contributing to product improvement</li>
                 </ul>

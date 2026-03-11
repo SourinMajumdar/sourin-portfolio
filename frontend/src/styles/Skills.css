@@ -39,7 +39,7 @@
 }
 
 .skill-icon-item {
-  flex: 0 0 88px;
+  flex: 0 0 130px;
 }
 
 .skill-icon-item {
@@ -77,6 +77,17 @@
 
 /* GitHub icon dark fix */
 .dark .icon-github { color: var(--text-primary) !important; }
+
+/* Vercel icon dark fix */
+.dark .icon-vercel { color: var(--text-primary) !important; }
+
+/* Cursor icon - show only in light mode */
+.icon-cursor { display: block; }
+.dark .icon-cursor { display: none; }
+
+/* CursorDark icon - show only in dark mode */
+.icon-cursordark { display: none; }
+.dark .icon-cursordark { display: block; }
 
 /* Legacy skill-badge used in lists */
 .skills-list { display: flex; flex-wrap: wrap; gap: 8px; }

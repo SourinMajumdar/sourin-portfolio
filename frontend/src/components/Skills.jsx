@@ -2,10 +2,13 @@ import React from "react";
 import "../styles/Skills.css";
 import kombaiIcon from "../assets/kombai.png";
 import firebaseIcon from "../assets/firebasesvg.svg";
+import supabaseIcon from "../assets/supabase.png";
+import cursorIcon from "../assets/cursor.png";
+import cursorDark from "../assets/cursordark.png";
 
 // Devicon / Simple Icons
 import { VscVscode } from "react-icons/vsc";
-import { RiJavascriptFill } from "react-icons/ri";
+import { RiJavascriptFill, RiCopilotFill } from "react-icons/ri";
 import {
   DiCss3,
   DiJava,
@@ -22,6 +25,7 @@ import {
   SiVite,
   SiFramer,
   SiBootstrap,
+  SiVercel,
   SiGithub,
   SiNetlify,
 } from "react-icons/si";
@@ -65,8 +69,22 @@ const Skills = () => {
         { name: "npm", icon: <SiNpm size={36} color="#af0000" /> },
         { name: "Vite", icon: <SiVite size={36} color="#6f00af" /> },
         { name: "Netlify", icon: <SiNetlify size={36} color="#00C7B7" className="icon-netlify" /> },
+        { name: "Vercel", icon: <SiVercel size={36} color="#000000" className="icon-vercel" />},
+        { name: "Supabase", icon: supabaseIcon, size: 36 },
         { name: "Kombai", icon: kombaiIcon, size: 36 },
         { name: "Firebase", icon: firebaseIcon, size: 36 },
+        { 
+          name: "Cursor", 
+          icon: (
+            <div style={{ position: 'relative', width: 36, height: 36 }}>
+              <img src={cursorIcon} alt="Cursor" width={36} height={36} className="icon-cursor" />
+              <img src={cursorDark} alt="Cursor Dark" width={36} height={36} className="icon-cursordark" style={{ position: 'absolute', top: 0, left: 0 }} />
+            </div>
+          ), 
+          size: 36 
+        },
+        { name: "GitHub Copilot", icon: <RiCopilotFill size={36} color="#3B82F6" /> },
+
       ],
     },
   ];

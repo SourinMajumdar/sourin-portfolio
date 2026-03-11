@@ -17,6 +17,23 @@ const projects = [
   },
   {
     id: 2,
+    title: 'Devmate',
+    subtitle: 'A developer dashboard and lightweight portfolio',
+    description: 'Devmate is a full-stack developer dashboard designed to help developers manage projects, track activity, and showcase their work through a shareable profile. It combines project management, GitHub activity insights, and portfolio-style presentation in a clean, centralized interface.',
+    image: '/devmate.png',
+    technologies: ['React.js', 'JavaScript', 'Vite', 'CSS', 'Supabase', 'GitHub API'],
+    features: [
+      'Centralized dashboard for managing and showcasing developer projects',
+      'Authentication and cloud persistence using Supabase',
+      'Project CRUD system with add, edit, and delete workflows',
+      'GitHub activity integration with a unified activity timeline',
+      'Shareable public developer profile page'
+    ],
+    githubUrl: 'https://github.com/SourinMajumdar/devmate',
+    liveUrl: 'https://devmateui.vercel.app/'
+  },
+  {
+    id: 3,
     title: 'SignMate',
     subtitle: 'Email Signature Builder',
     description: 'A modern, browser-based email signature generator for creating professional, brand-consistent signatures in seconds. Built with React and optimized for major email clients.',
@@ -30,22 +47,6 @@ const projects = [
     ],
     githubUrl: 'https://github.com/SourinMajumdar/SignMate',
     liveUrl: 'https://signmateui.vercel.app/'
-  },
-  {
-    id: 3,
-    title: 'Devmate',
-    subtitle: 'A centralized developer dashboard',
-    description: 'Devmate is a modern developer dashboard that brings projects, activity, and portfolio management into a single interface. It provides a clean workspace to manage and showcase development work, track recent activity, and visualize personal progress through a structured, dashboard-style experience.',
-    image: '/devmate.png',
-    technologies: ['React.js', 'JavaScript', 'Vite', 'CSS'],
-    features: [
-      'Centralized dashboard for managing and showcasing developer projects',
-      'Editable developer profile with tech stack and personal details',
-      'Project management with add, edit, and delete workflows',
-      'Analytics snapshot and content timeline for activity tracking'
-    ],
-    githubUrl: 'https://github.com/SourinMajumdar/devmate',
-    liveUrl: 'https://devmateui.netlify.app/'
   },
   {
     id: 4,
