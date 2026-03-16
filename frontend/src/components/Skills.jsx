@@ -8,14 +8,14 @@ import cursorDark from "../assets/cursordark.png";
 
 // Devicon / Simple Icons
 import { VscVscode } from "react-icons/vsc";
-import { RiJavascriptFill, RiCopilotFill } from "react-icons/ri";
+import { RiJavascriptFill, RiCopilotFill, RiNextjsFill } from "react-icons/ri";
+import { FaGitAlt } from "react-icons/fa";
 import {
   DiCss3,
   DiJava,
   DiPython,
   DiHtml5,
   DiReact,
-  DiGit,
 } from "react-icons/di";
 
 import {
@@ -29,9 +29,11 @@ import {
   SiGithub,
   SiNetlify,
 } from "react-icons/si";
+import { BiLogoTypescript } from "react-icons/bi";
 
 // Lucide icons for category headers
 import { Code, Component, Wrench } from "lucide-react";
+import { FaG } from "react-icons/fa6";
 
 const Skills = () => {
   const skillCategories = [
@@ -40,6 +42,7 @@ const Skills = () => {
       icon: <Code size={24} />,
       skills: [
         { name: "JavaScript", icon: <RiJavascriptFill size={36} color="#F7DF1E" /> },
+        { name: "TypeScript", icon: <BiLogoTypescript size={36} color="#3178C6" /> },
         { name: "Java", icon: <DiJava size={36} color="#007396" /> },
         { name: "Python", icon: <DiPython size={36} color="#3776AB" /> },
         { name: "HTML", icon: <DiHtml5 size={36} color="#E34F26" /> },
@@ -52,8 +55,7 @@ const Skills = () => {
       icon: <Component size={24} />,
       skills: [
         { name: "React", icon: <DiReact size={36} color="#61DAFB" /> },
-        
-        
+        { name: "Next.js", icon: <RiNextjsFill size={36} color="#000000" className="icon-nextjs"/> },
         { name: "Tailwind CSS", icon: <SiTailwindcss size={36} color="#1572B6" /> },
         { name: "Framer Motion", icon: <SiFramer size={36} color="#E91E63" /> },
         { name: "Bootstrap", icon: <SiBootstrap size={36} color="#7952B3" /> },
@@ -63,7 +65,7 @@ const Skills = () => {
       title: "Tools & Technologies",
       icon: <Wrench size={24} />,
       skills: [
-        { name: "Git", icon: <DiGit size={36} color="#F05032" className="icon-git" /> },
+        { name: "Git", icon: <FaGitAlt size={36} color="#F05032" className="icon-git" /> },
         { name: "GitHub", icon: <SiGithub size={36} color="#181717" className="icon-github" /> },
         { name: "VS Code", icon: <VscVscode size={36} color="#007ACC" className="icon-vscode" /> },
         { name: "npm", icon: <SiNpm size={36} color="#af0000" /> },

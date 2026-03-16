@@ -50,6 +50,23 @@ const projects = [
   },
   {
     id: 4,
+    title: 'Jora Ilish',
+    subtitle: 'Restaurant Website',
+    description: 'A modern, responsive website designed for Jora Ilish, a popular Bengali restaurant in Guwahati. The site showcases the restaurant’s menu, gallery, customer reviews, and location to provide customers with an easy way to explore the restaurant online.',
+    image: '/jorailish.png',
+    technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
+    features: [
+      'Responsive hero slider showcasing signature dishes',
+      'Interactive full menu with category navigation and search',
+      'Gallery section displaying restaurant ambience and food',
+      'Customer testimonials carousel with Google review integration',
+      'Location, opening hours, and delivery platform links'
+    ],
+    githubUrl: 'https://github.com/SourinMajumdar/jorailish',
+    liveUrl: 'https://jorailish.vercel.app/'
+  },
+  {
+    id: 5,
     title: 'Link in Bio',
     subtitle: 'A personal landing page for all my social links',
     description: 'A minimal and responsive Link-in-Bio web application that acts as a single hub for all my social profiles, portfolio, and important links. Designed with a clean UI, smooth animations, and mobile-first responsiveness for easy sharing.',
@@ -66,7 +83,7 @@ const projects = [
     liveUrl: 'https://sourinlinks.vercel.app/'
   },
   {
-    id: 5,
+    id: 6,
     title: 'Taskmate',
     subtitle: 'Todo Application',
     description: 'A beautiful and responsive single-page application for managing daily tasks. Built with React functional components and hooks, featuring a modern glassmorphism UI design.',
@@ -83,7 +100,7 @@ const projects = [
     liveUrl: 'https://taskmateui.netlify.app/'
   },
   {
-    id: 6,
+    id: 7,
     title: 'TinDog',
     subtitle: 'Landing Page Design',
     description: 'A creative and responsive landing page for a fictional dog dating platform. Showcases clean UI/UX design principles and mobile-first development approach.',
@@ -100,7 +117,7 @@ const projects = [
     liveUrl: 'https://sourinmajumdar.github.io/TinDog/'
   },
   {
-    id: 7,
+    id: 8,
     title: 'Simon Game',
     subtitle: 'Memory-Based Game',
     description: "A classic Simon memory game recreated for the browser. Tests users' memory by generating increasingly complex color sequences that must be repeated correctly.",
@@ -116,7 +133,7 @@ const projects = [
     liveUrl: 'https://sourinmajumdar.github.io/Simon-Game/'
   },
   {
-    id: 8,
+    id: 9,
     title: 'Drum Kit',
     subtitle: 'Keyboard-Driven Music App',
     description: "An interactive drum kit web application that allows users to play drum sounds using keyboard keys or mouse clicks, focusing on event handling and audio integration.",
@@ -132,7 +149,7 @@ const projects = [
     liveUrl: 'https://sourinmajumdar.github.io/Drum-Kit/'
   },
   {
-    id: 9,
+    id: 10,
     title: 'Dice Game',
     subtitle: 'Interactive Browser Game',
     description: 'A simple and interactive browser-based dice game that simulates random dice rolls and determines a winner on each refresh. Built to practice DOM manipulation and basic game logic.',

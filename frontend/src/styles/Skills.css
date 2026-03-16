@@ -81,6 +81,8 @@
 /* Vercel icon dark fix */
 .dark .icon-vercel { color: var(--text-primary) !important; }
 
+.dark .icon-nextjs {color: var(--text-primary) !important; }
+
 /* Cursor icon - show only in light mode */
 .icon-cursor { display: block; }
 .dark .icon-cursor { display: none; }
