@@ -67,6 +67,24 @@ const projects = [
   },
   {
     id: 5,
+    title: 'WedlocK Photography',
+    subtitle: 'Wedding Photographer Portfolio',
+    description: 'A modern, elegant portfolio website designed for Wedlock Photography, a wedding photography and cinematography team based in Guwahati, Assam. The website focuses on showcasing their storytelling style through a clean, minimalist layout, immersive gallery, and smooth interactions that reflect the premium nature of their work.',
+    image: '/wedlock.png',
+    technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
+    features: [
+      'Full-screen cinematic hero section with smooth scroll interactions',
+      'Dynamic gallery with category filters and masonry/grid toggle view',
+      'Lightbox experience for immersive photo viewing',
+      'Elegant About section highlighting brand story and founders',
+      'Responsive design optimized for all devices with fast loading',
+      'Subtle animations and transitions for a premium user experience'
+    ],
+    githubUrl: 'https://github.com/SourinMajumdar/wedlock.git',
+    liveUrl: 'https://wedlockph.vercel.app/'
+  },
+  {
+    id: 5,
     title: 'Link in Bio',
     subtitle: 'A personal landing page for all my social links',
     description: 'A minimal and responsive Link-in-Bio web application that acts as a single hub for all my social profiles, portfolio, and important links. Designed with a clean UI, smooth animations, and mobile-first responsiveness for easy sharing.',
