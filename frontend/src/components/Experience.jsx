@@ -44,7 +44,7 @@ const Experience = () => {
                   </div>
 
                   </div>
-                <div className="experience-date">Jan 2026 - Present</div>
+                <div className="experience-date">Jan 2026 - March 2026</div>
               </div>
 
               <div className="experience-description">
@@ -133,7 +133,7 @@ const Experience = () => {
                     </div>
                   </div>
                 </div>
-                <div className="experience-date">Dec 2025 - Present</div>
+                <div className="experience-date">Dec 2025 - Feb 2026</div>
               </div>
 
               <div className="experience-description">
