@@ -45,7 +45,7 @@ function App() {
           <Route path="/" element={<Portfolio isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} accentId={accentId} changeAccent={changeAccent} />} />
           <Route path="/projects" element={<AllProjects isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />} />
         </Routes>
-        <ScrollToTop/>
+        <ScrollToTop accentId={accentId} changeAccent={changeAccent} />
       </BrowserRouter>
     </div>
   );

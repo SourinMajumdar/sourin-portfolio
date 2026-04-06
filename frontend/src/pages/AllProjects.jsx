@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ExternalLink, Github, Sparkles, ArrowLeft } from 'lucide-react';
+import { ExternalLink, Github, Sparkles, ArrowLeft, LayoutGrid, LayoutList } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Button } from '../components/ui/button';
 import Navigation from '../components/Navigation';
@@ -10,6 +10,7 @@ import '../styles/Projects.css';
 import '../styles/AllProjects.css';
 
 const AllProjects = ({ isDarkMode, toggleDarkMode }) => {
+  const [layoutMode, setLayoutMode] = useState('grid');
   const navigate = useNavigate();
 
   // Reset scroll position when page mounts
@@ -41,11 +42,39 @@ const AllProjects = ({ isDarkMode, toggleDarkMode }) => {
       <main className="all-projects-main">
         {/* Page header */}
         <div className="all-projects-header">
-          <button className="back-btn" onClick={() => navigate('/', { state: { scrollTo: 'projects' } })}>
-            <ArrowLeft size={18} />
-            Back to Portfolio
-          </button>
-          <h1 className="all-projects-title">All my Projects</h1>
+          <div className="all-projects-header-top">
+            <button
+              className="back-btn"
+              onClick={() => navigate('/', { state: { scrollTo: 'projects' } })}
+              aria-label="Back to Portfolio"
+              title="Back"
+            >
+              <ArrowLeft size={18} />
+            </button>
+
+            <h1 className="all-projects-title">All my Works</h1>
+
+            <div className="layout-toggle-group">
+              <button
+                type="button"
+                className={`layout-toggle${layoutMode === 'grid' ? ' active' : ''}`}
+                onClick={() => setLayoutMode('grid')}
+                aria-label="Grid layout"
+                title="Grid layout"
+              >
+                <LayoutGrid size={18} />
+              </button>
+              <button
+                type="button"
+                className={`layout-toggle${layoutMode === 'horizontal' ? ' active' : ''}`}
+                onClick={() => setLayoutMode('horizontal')}
+                aria-label="Horizontal layout"
+                title="Horizontal layout"
+              >
+                <LayoutList size={18} />
+              </button>
+            </div>
+          </div>
           <p className="all-projects-subtitle">
             A complete showcase of my works.
           </p>
@@ -54,7 +83,7 @@ const AllProjects = ({ isDarkMode, toggleDarkMode }) => {
         {/* Projects grid */}
         <div className="section-container">
           <motion.div
-            className="projects-grid expanded"
+            className={`projects-grid expanded ${layoutMode === 'horizontal' ? 'horizontal' : ''}`}
             variants={containerVariants}
             initial="hidden"
             animate="visible"

@@ -9,10 +9,73 @@
 
 /* ── Header ── */
 .all-projects-header {
-  text-align: center;
+  text-align: left;
   padding: 72px 24px 56px;
   position: relative;
   overflow: hidden;
+}
+
+.all-projects-header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  width: 100%;
+  min-height: 56px;
+}
+
+.layout-toggle-group {
+  display: inline-flex;
+  gap: 10px;
+  flex-wrap: nowrap;
+}
+
+.all-projects-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  white-space: nowrap;
+}
+
+.layout-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--bg-surface);
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dark .layout-toggle {
+  background: var(--bg-elevated);
+}
+
+.layout-toggle:hover {
+  background: rgba(87, 87, 232, 0.08);
+  border-color: var(--accent-border);
+  color: var(--accent);
+}
+
+.layout-toggle.active {
+  background: var(--accent-bg);
+  border-color: var(--accent);
+  color: var(--accent);
+  box-shadow: none;
+}
+
+.layout-toggle.active:hover {
+  background: rgba(87, 87, 232, 0.14);
 }
 
 /* Aurora hint behind header */
@@ -39,11 +102,11 @@
 .back-btn {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 8px 16px;
-  margin-bottom: 40px;
-  font-size: 0.84rem;
-  font-weight: 600;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  margin-bottom: 0;
   border-radius: var(--radius-sm);
   border: 1px solid var(--border);
   background: var(--bg-surface);
@@ -57,7 +120,7 @@
   border-color: var(--accent-border);
   color: var(--accent);
   background: var(--accent-bg);
-  transform: translateX(-2px);
+  transform: none;
 }
 
 .all-projects-title {
@@ -65,7 +128,7 @@
   font-size: clamp(2rem, 5vw, 2.75rem);
   font-weight: 700;
   letter-spacing: -0.035em;
-  margin-bottom: 14px;
+  margin-bottom: 0;
   background: linear-gradient(145deg, var(--text-primary) 0%, var(--accent) 60%, var(--accent-violet) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -82,9 +145,10 @@
 .all-projects-subtitle {
   font-size: 1rem;
   color: var(--text-secondary);
-  max-width: 460px;
-  margin: 0 auto 20px;
+  max-width: 640px;
+  margin: 20px auto 0;
   line-height: 1.7;
+  text-align: center;
 }
 
 .all-projects-count { display: flex; justify-content: center; }
@@ -110,4 +174,24 @@
 @media (max-width: 768px) {
   .all-projects-header { padding: 48px 20px 40px; }
   .all-projects-main .section-container { padding: 0 16px 64px; }
+  .all-projects-header-top {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 0;
+    min-height: auto;
+  }
+  .all-projects-title {
+    position: static;
+    transform: none;
+    width: auto;
+    text-align: right;
+    margin-top: 0;
+  }
+  .all-projects-subtitle {
+    text-align: right;
+    margin-top: 12px;
+  }
+  .layout-toggle-group {
+    display: none;
+  }
 }

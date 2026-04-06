@@ -21,7 +21,7 @@ const About = () => {
           <div className="about-text">
             <p className="about-intro">
               I'm a Computer Science student at Vellore Institute of Technology with an interest in 
-              frontend development and problem-solving. I enjoy building intuitive interfaces and 
+              Web development and problem-solving. I enjoy building intuitive interfaces and 
               exploring web development through hands-on projects, continuously learning 
               and refining my skills along the way.
             </p>
